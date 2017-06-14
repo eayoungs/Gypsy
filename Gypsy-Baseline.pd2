@@ -1,0 +1,1667 @@
+Proj   "Gypsy-Baseline"  
+   ProgramVersion = "eQUEST 3.65.7173"
+   BDBaseVersion = 25
+   ProductCode = "eQUEST"
+   WeatherFile = "TMY2\PORTLAOR.bin"
+   CreateDate = 1446512138
+   ModDate = 1473972103
+   RunDate = 1473875751
+   LibraryFile = "eQ_Lib.dat"
+   ActiveMode = 0
+   InputModule = 4
+   ComplianceRules = "LEED-NC - v3.0 (LEED.bin)"
+   UseCameraData = 1
+   ClippingRange = ( 118.427, 511.437 )
+   FocalPoint = ( -1.22502, -6.70075, 44.5293 )
+   Position = ( -106.469, -141.405, 261.255 )
+   ViewUpVector = ( 0, 0, 1 )
+   ViewAngle = 33.5907
+   InterfaceMode = 1
+   AllowWizard = 1
+   NotProjFile = "Gypsy-Baseline"
+   InputUnitsType = "English"
+   OutputUnitsType = "English"
+   PreviousName = "Gypsy-TestBase"
+   DetailedModelEdits = 1
+   ProjTreeType = ( 0, 1, 1, 1, 1, 1 )
+   ProjTreeID = ( 10000, 10060009, 10080001, 10630001, 10550026, 
+                  10750000 )
+   ProjTreeLabel = ( "Project:  'Gypsy-TestBase'", "Typ_ExtWall-CNS", 
+                     "Commercial_GrnFlr_2-SPC", "ASHRAE-G3.1.3.5", 
+                     "EL2 West Perim Zn (M.W28)", "EM1" )
+   ..
+
+MainWiz   "Gypsy-Baseline"  
+   ProductCode = "eQUEST"
+   WizardType = "Design Development"
+   DebugID = 0
+   AllowCustWinDoor = 1
+   ScreenIDArrIdx = 0
+   Compliance = "LEED-NC (Appendix G)"
+   State = "Oregon"
+   Location = "Portland"
+   BldgType = "Office Bldg, Mid-Rise"
+   HVACDefaulted = 1
+   ..
+
+ShellWiz   "Bldg Envelope & Loads 1"  
+   ModelEnduse[1] = 0
+   ModelEnduse[2] = 0
+   ModelEnduse[4] = 0
+   ModelEnduse[6] = 0
+   ModelEnduse[7] = 0
+   ScreenIDArrIdx = 12
+   ScreenIDArrID = 71
+   BldgType = "Multifamily, Mid-Rise (interior entries)"
+   FlrsAboveGrade = 1
+   ShellPos_Specify = 1
+   Footprint = "- custom -"
+   FlrToFlr = 16.2
+   FlrToCeiling = 16.2
+   ZoningPattern = "- custom -"
+   NumMCZnGrps = 0
+   DiagLink = "Bldg Envelope & Loads 1 Diag Data"
+   RoofConsType = "No Exterior Exposure (adiabatic)"
+   VertExtConsType = "Metal Frame, 2x4, 24 in. o.c."
+   VertExtIntInsType = "1 in. polyisocyanurate (R-7)"
+   ZoningCurrent = 1
+   NumFloorVertices = 50
+   FloorVertX[1] = -83
+   FloorVertX[2] = -83
+   FloorVertX[3] = -77.9
+   FloorVertX[4] = -77.9
+   FloorVertX[5] = -82.5
+   FloorVertX[6] = -82.5
+   FloorVertX[7] = 6
+   FloorVertX[8] = 6
+   FloorVertX[9] = 10.5
+   FloorVertX[10] = 10.5
+   FloorVertX[11] = -5
+   FloorVertX[12] = -5
+   FloorVertX[13] = 25.25
+   FloorVertX[14] = 25.25
+   FloorVertX[15] = 34.15
+   FloorVertX[16] = 34
+   FloorVertX[17] = 42.5
+   FloorVertX[18] = 42.5
+   FloorVertX[19] = 52.5
+   FloorVertX[20] = 52.5
+   FloorVertX[21] = 79.8
+   FloorVertX[22] = 79.95
+   FloorVertX[23] = 76.95
+   FloorVertX[24] = 76.95
+   FloorVertX[25] = 79.95
+   FloorVertX[26] = 80
+   FloorVertX[27] = 77
+   FloorVertX[28] = 77
+   FloorVertX[29] = 80
+   FloorVertX[30] = 80
+   FloorVertX[31] = 58.5
+   FloorVertX[32] = 58.5
+   FloorVertX[33] = 68
+   FloorVertX[34] = 68
+   FloorVertX[35] = 65
+   FloorVertX[36] = 65
+   FloorVertX[37] = 68
+   FloorVertX[38] = 68
+   FloorVertX[39] = 65
+   FloorVertX[40] = 65
+   FloorVertX[41] = 68
+   FloorVertX[42] = 68
+   FloorVertX[43] = 10
+   FloorVertX[44] = 10
+   FloorVertX[45] = 6
+   FloorVertX[46] = 6
+   FloorVertX[47] = -8
+   FloorVertX[48] = -8
+   FloorVertX[49] = -17
+   FloorVertX[50] = -17
+   FloorVertY[1] = 56
+   FloorVertY[2] = 9
+   FloorVertY[3] = 9
+   FloorVertY[4] = 3.9
+   FloorVertY[5] = 4
+   FloorVertY[6] = -23
+   FloorVertY[7] = -23
+   FloorVertY[8] = -20
+   FloorVertY[9] = -20
+   FloorVertY[10] = -41
+   FloorVertY[11] = -41
+   FloorVertY[12] = -74
+   FloorVertY[13] = -74
+   FloorVertY[14] = -70
+   FloorVertY[15] = -70
+   FloorVertY[16] = -74
+   FloorVertY[17] = -74
+   FloorVertY[18] = -79
+   FloorVertY[19] = -79
+   FloorVertY[20] = -73.5
+   FloorVertY[21] = -73.5
+   FloorVertY[22] = -56.25
+   FloorVertY[23] = -56.25
+   FloorVertY[24] = -50.25
+   FloorVertY[25] = -50.25
+   FloorVertY[26] = -32
+   FloorVertY[27] = -32
+   FloorVertY[28] = -26
+   FloorVertY[29] = -25.8
+   FloorVertY[30] = -4
+   FloorVertY[31] = -4
+   FloorVertY[32] = 4.95
+   FloorVertY[33] = 5
+   FloorVertY[34] = 18
+   FloorVertY[35] = 18
+   FloorVertY[36] = 24
+   FloorVertY[37] = 24
+   FloorVertY[38] = 46.25
+   FloorVertY[39] = 46.25
+   FloorVertY[40] = 52.25
+   FloorVertY[41] = 52.25
+   FloorVertY[42] = 66
+   FloorVertY[43] = 66
+   FloorVertY[44] = 63
+   FloorVertY[45] = 63
+   FloorVertY[46] = 66
+   FloorVertY[47] = 66
+   FloorVertY[48] = 42.5
+   FloorVertY[49] = 42.5
+   FloorVertY[50] = 56
+   AdiabaticCurrent = 1
+   GroundZnGrp[1] = "Zone Group 5"
+   GroundZnGrp[2] = "Zone Group 5"
+   GroundZnGrp[3] = "Zone Group 5"
+   GroundZnGrp[4] = "Zone Group 5"
+   GroundZnGrp[5] = "Zone Group 5"
+   ZoneGroupsOK = 1
+   DfltZnGrpName[1] = "EL1 Underground Areas"
+   DfltZnGrpName[2] = "EL1 Ground Floor"
+   DfltZnGrpName[3] = "EL1 Ground Floor"
+   DfltZnGrpName[4] = "EL1 Typical Floor(s)"
+   DfltZnGrpName[5] = "EL1 Typical Floor(s)"
+   DfltZnGrpName[6] = "EL1 Top Floor"
+   DfltZnGrpName[7] = "EL1 Top Floor"
+   DfltZnGrpName[8] = "EL1 Data Center"
+   CustomFootprint = 1
+   CustomZoning = 1
+   ActiveZoneIndex = 11
+   CustomRoofZoning = -1
+   ActiveRoofZoneIdx = 1
+   FloorArea = 16627.2
+   FloorPerimLen = 746.011
+   LastFootprint = 1
+   WindowHeight[1] = 12
+   WinSillHeight[1] = 2
+   WinAreaSpecMethod = "Percent of Gross Wall Area (floor to floor)"
+   PercentGlassI1[1] = 34
+   PercentGlassI2[1] = 30
+   PercentGlassI3[1] = 25
+   PercentGlassI4[1] = 34
+   DoorType[1] = "- select another -"
+   DoorType[2] = "- select another -"
+   SkyZonesCurrent = 1
+   SkyltZones[1] = 1
+   SkyltZones[2] = 1
+   SkyltZones[3] = 1
+   SkyltZones[4] = 1
+   SkyltZones[5] = 1
+   SkyltZones[6] = 1
+   SkyltZones[7] = 1
+   SkyltZones[8] = 1
+   SkyltZones[9] = 1
+   SkyltZones[10] = 1
+   SkyltZones[11] = 1
+   SkyPosCurrent = 1
+   DayZonesCurrent[3] = 1
+   DayltZones[1] = 1
+   DayltZones[2] = 1
+   DayltZones[3] = 1
+   DayltZones[4] = 1
+   DayltZones[5] = 0
+   DayltZones[201] = 1
+   DayltZones[202] = 1
+   DayltZones[203] = 1
+   DayltZones[204] = 1
+   DayltZones[205] = 0
+   DayltZones[401] = 1
+   DayltZones[402] = 1
+   DayltZones[403] = 1
+   DayltZones[404] = 1
+   DayltZones[405] = 1
+   DayltZones[406] = 1
+   DayltZones[407] = 1
+   DayltZones[408] = 1
+   DayltZones[409] = 1
+   DayltZones[410] = 1
+   DayltZones[411] = 1
+   WinDoorCurrent = 1
+   DetailsCurrent = ( 1, 1, 1 )
+   BDLNumDayltCtrls[1] = 0
+   BDLNumDayltCtrls[2] = 0
+   BDLNumDayltCtrls[3] = 0
+   BDLNumDayltCtrls[4] = 0
+   BDLNumDayltCtrls[5] = 0
+   BDLNumDayltCtrls[201] = 0
+   BDLNumDayltCtrls[202] = 0
+   BDLNumDayltCtrls[203] = 0
+   BDLNumDayltCtrls[204] = 0
+   BDLNumDayltCtrls[205] = 0
+   BDLNumDayltCtrls[401] = 0
+   BDLNumDayltCtrls[402] = 0
+   BDLNumDayltCtrls[403] = 0
+   BDLNumDayltCtrls[404] = 0
+   BDLNumDayltCtrls[405] = 0
+   BDLNumDayltCtrls[406] = 0
+   BDLNumDayltCtrls[407] = 0
+   BDLNumDayltCtrls[408] = 0
+   BDLNumDayltCtrls[409] = 0
+   BDLNumDayltCtrls[410] = 0
+   BDLNumDayltCtrls[411] = 0
+   ActAreaType[1] = "Residential (Multifamily Dwelling Unit)"
+   ActAreaType[2] = "- select another -"
+   ActAreaType[3] = "- select another -"
+   ActAreaType[4] = "- select another -"
+   ActAreaType[5] = "- select another -"
+   PercentArea[1] = 100
+   SeasonType[1] = "Closed"
+   OccShape[1] = "EL1 Occup Profile (S1)"
+   ILShape[1] = "EL1 InsLtg Profile (S1)"
+   ELDayShapes = ( "EL1 ExtLtg DayShape (Jan)", 
+                   "EL1 ExtLtg DayShape (Feb)", 
+                   "EL1 ExtLtg DayShape (Mar)", 
+                   "EL1 ExtLtg DayShape (Apr)", 
+                   "EL1 ExtLtg DayShape (May)", 
+                   "EL1 ExtLtg DayShape (Jun)", 
+                   "EL1 ExtLtg DayShape (Jul)", 
+                   "EL1 ExtLtg DayShape (Aug)", 
+                   "EL1 ExtLtg DayShape (Sep)", 
+                   "EL1 ExtLtg DayShape (Oct)", 
+                   "EL1 ExtLtg DayShape (Nov)", 
+                   "EL1 ExtLtg DayShape (Dec)" )
+   OEShape[1] = "EL1 OffEq Profile (S1)"
+   CEShape[1] = "EL1 CookEq Profile (S1)"
+   MiscShape[1] = "EL1 Misc Profile (S1)"
+   DHWShape[1] = "EL1 DHW Profile (S1)"
+   SCRShape[1] = "EL1 S-C Refrig Profile (S1)"
+   GroundExtFacets[1] = "Facet-0-37"
+   DaylitAreaCurrent[3] = 1
+   RoofZoneErrorCode = 4
+   ..
+
+ShapeWiz   "EL1 InsLtg Profile (S1)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Jan)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Feb)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Mar)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Apr)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (May)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Jun)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Jul)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Aug)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Sep)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Oct)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Nov)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Dec)"  
+   ..
+
+ShapeWiz   "EL1 OffEq Profile (S1)"  
+   ..
+
+ShapeWiz   "EL1 Misc Profile (S1)"  
+   ..
+
+ShapeWiz   "EL1 DHW Profile (S1)"  
+   ..
+
+ShapeWiz   "EL1 Occup Profile (S1)"  
+   ..
+
+ShapeWiz   "EL1 CookEq Profile (S1)"  
+   ..
+
+ShapeWiz   "EL1 S-C Refrig Profile (S1)"  
+   ..
+
+ZnGrpWiz   "EL1 Ground Floor"  
+   ShortName = "GndFlr"
+   IsConditioned = 1
+   ..
+
+CustomZone   "Custom Zone 1"  
+   NumVerts = 10
+   X[1] = 10
+   X[2] = 10
+   X[3] = 10
+   X[4] = 16
+   X[5] = 68
+   X[6] = 68
+   X[7] = 65
+   X[8] = 65
+   X[9] = 68
+   X[10] = 68
+   Y[1] = 66
+   Y[2] = 63
+   Y[3] = 35
+   Y[4] = 35
+   Y[5] = 35
+   Y[6] = 46.25
+   Y[7] = 46.25
+   Y[8] = 52.25
+   Y[9] = 52.25
+   Y[10] = 66
+   ..
+
+CustomZone   "Custom Zone 2"  
+   NumVerts = 13
+   X[1] = 68
+   X[2] = 16
+   X[3] = 16
+   X[4] = 11
+   X[5] = 11
+   X[6] = 16
+   X[7] = 58.5
+   X[8] = 58.5
+   X[9] = 68
+   X[10] = 68
+   X[11] = 65
+   X[12] = 65
+   X[13] = 68
+   Y[1] = 35
+   Y[2] = 35
+   Y[3] = 25
+   Y[4] = 25
+   Y[5] = -4
+   Y[6] = -4
+   Y[7] = -4
+   Y[8] = 5
+   Y[9] = 5
+   Y[10] = 18
+   Y[11] = 18
+   Y[12] = 24
+   Y[13] = 24
+   ..
+
+CustomZone   "Custom Zone 3"  
+   NumVerts = 19
+   X[1] = 16
+   X[2] = 16
+   X[3] = 10.5
+   X[4] = 10.5
+   X[5] = 10.5
+   X[6] = 52.5
+   X[7] = 52.5
+   X[8] = 52.5
+   X[9] = 79.8
+   X[10] = 79.95
+   X[11] = 76.95
+   X[12] = 76.95
+   X[13] = 79.95
+   X[14] = 80
+   X[15] = 77
+   X[16] = 77
+   X[17] = 80
+   X[18] = 80
+   X[19] = 58.5
+   Y[1] = -4
+   Y[2] = -10
+   Y[3] = -10
+   Y[4] = -20
+   Y[5] = -41
+   Y[6] = -41
+   Y[7] = -62
+   Y[8] = -73.5
+   Y[9] = -73.5
+   Y[10] = -56.25
+   Y[11] = -56.25
+   Y[12] = -50.25
+   Y[13] = -50.25
+   Y[14] = -32
+   Y[15] = -32
+   Y[16] = -26
+   Y[17] = -25.8
+   Y[18] = -4
+   Y[19] = -4
+   ..
+
+CustomZone   "Custom Zone 4"  
+   NumVerts = 11
+   X[1] = 52.5
+   X[2] = 10.5
+   X[3] = -5
+   X[4] = -5
+   X[5] = 25.25
+   X[6] = 25.25
+   X[7] = 34.15
+   X[8] = 34
+   X[9] = 42.5
+   X[10] = 42.5
+   X[11] = 52.5
+   Y[1] = -41
+   Y[2] = -41
+   Y[3] = -41
+   Y[4] = -74
+   Y[5] = -74
+   Y[6] = -70
+   Y[7] = -70
+   Y[8] = -74
+   Y[9] = -74
+   Y[10] = -62
+   Y[11] = -62
+   ..
+
+CustomZone   "Custom Zone 5"  
+   NumVerts = 6
+   X[1] = 42.5
+   X[2] = 42.5
+   X[3] = 42.5
+   X[4] = 52.5
+   X[5] = 52.5
+   X[6] = 52.5
+   Y[1] = -62
+   Y[2] = -74
+   Y[3] = -79
+   Y[4] = -79
+   Y[5] = -73.5
+   Y[6] = -62
+   ..
+
+CustomZone   "Custom Zone 6"  
+   NumVerts = 6
+   X[1] = -82.5
+   X[2] = -82.5
+   X[3] = 6
+   X[4] = 6
+   X[5] = 6
+   X[6] = -77.9
+   Y[1] = 4
+   Y[2] = -23
+   Y[3] = -23
+   Y[4] = -20
+   Y[5] = 4
+   Y[6] = 4
+   ..
+
+CustomZone   "Custom Zone 7"  
+   NumVerts = 9
+   X[1] = -58
+   X[2] = -58
+   X[3] = 6
+   X[4] = 6
+   X[5] = 6
+   X[6] = -8
+   X[7] = -8
+   X[8] = -17
+   X[9] = -17
+   Y[1] = 56
+   Y[2] = 9
+   Y[3] = 9
+   Y[4] = 63
+   Y[5] = 66
+   Y[6] = 66
+   Y[7] = 42.5
+   Y[8] = 42.5
+   Y[9] = 56
+   ..
+
+CustomZone   "Custom Zone 8"  
+   NumVerts = 4
+   X[1] = -77.9
+   X[2] = -77.9
+   X[3] = 6
+   X[4] = 6
+   Y[1] = 9
+   Y[2] = 4
+   Y[3] = 4
+   Y[4] = 9
+   ..
+
+CustomZone   "Custom Zone 9"  
+   NumVerts = 7
+   X[1] = 6
+   X[2] = 6
+   X[3] = 11
+   X[4] = 16
+   X[5] = 16
+   X[6] = 10
+   X[7] = 10
+   Y[1] = 63
+   Y[2] = 9
+   Y[3] = 25
+   Y[4] = 25
+   Y[5] = 35
+   Y[6] = 35
+   Y[7] = 63
+   ..
+
+CustomZone   "Custom Zone 10"  
+   NumVerts = 9
+   X[1] = 6
+   X[2] = 6
+   X[3] = 10.5
+   X[4] = 10.5
+   X[5] = 16
+   X[6] = 16
+   X[7] = 11
+   X[8] = 11
+   X[9] = 6
+   Y[1] = 3.45
+   Y[2] = -20
+   Y[3] = -20
+   Y[4] = -10
+   Y[5] = -10
+   Y[6] = -4.2
+   Y[7] = -4.2
+   Y[8] = 25
+   Y[9] = 9
+   ..
+
+CustomZone   "Custom Zone 15"  
+   NumVerts = 5
+   X[1] = -58
+   X[2] = -83
+   X[3] = -83
+   X[4] = -77.9
+   X[5] = -58
+   Y[1] = 56
+   Y[2] = 56
+   Y[3] = 9
+   Y[4] = 9
+   Y[5] = 9
+   ..
+
+FacetWiz   "Facet-0-37"  
+   ParentZoneIdx = 5
+   SegmentNumber = 1
+   ..
+
+WinWiz   "Custom Window 1"  
+   X = 4.67
+   Y = 3.67
+   Width = 2.67
+   Height = 4.33
+   FramePercent = -1
+   FrameWidth = 1.6
+   IsDoor = 0
+   GlassTypeIdx = 0
+   ..
+
+WinWiz   "Custom Window 2"  
+   X = 12.833
+   Y = 3.667
+   Width = 2.667
+   Height = 4.33
+   FramePercent = -1
+   FrameWidth = 1.6
+   IsDoor = 0
+   GlassTypeIdx = 0
+   ..
+
+WinWiz   "Custom Window 3"  
+   X = 16.33
+   Y = 3.67
+   Width = 2.67
+   Height = 4.33
+   FramePercent = -1
+   FrameWidth = 1.6
+   IsDoor = 0
+   GlassTypeIdx = 0
+   ..
+
+WinWiz   "Custom Window 4"  
+   X = 23.33
+   Y = 1.5
+   Width = 2
+   Height = 6.33
+   FramePercent = -1
+   FrameWidth = 6
+   IsDoor = 0
+   GlassTypeIdx = 0
+   ..
+
+WinWiz   "Custom Window 5"  
+   X = 26.25
+   Y = 1.5
+   Width = 2
+   Height = 6.33
+   FramePercent = -1
+   FrameWidth = 6
+   IsDoor = 0
+   GlassTypeIdx = 0
+   ..
+
+WinWiz   "Custom Window 6"  
+   X = 33.5
+   Y = 1.5
+   Width = 2
+   Height = 6.33
+   FramePercent = -1
+   FrameWidth = 6
+   IsDoor = 0
+   GlassTypeIdx = 0
+   ..
+
+WinWiz   "Custom Window 7"  
+   X = 36.75
+   Y = 1.5
+   Width = 2
+   Height = 6.33
+   FramePercent = -1
+   FrameWidth = 6
+   IsDoor = 0
+   GlassTypeIdx = 0
+   ..
+
+ZnGrpWiz   "Zone Group 5"  
+   ShortName = "GndFlr"
+   ..
+
+ShellWiz   "Bldg Envelope & Loads 2"  
+   ModelEnduse[1] = 0
+   ModelEnduse[2] = 0
+   ModelEnduse[4] = 0
+   ModelEnduse[6] = 0
+   ModelEnduse[7] = 1
+   ModelEnduse[12] = 0
+   ScreenIDArrIdx = 14
+   ScreenIDArrID = 77
+   BldgType = "Multifamily, High-Rise (interior entries)"
+   FlrsAboveGrade = 3
+   ShellPos_Dir = "Immediately Above"
+   ShellPos_Specify = 1
+   BldgX = 0
+   BldgY = 0
+   BldgZ = 16.17
+   Footprint = "- custom -"
+   FlrToFlr = 10.7
+   FlrToCeiling = 10.7
+   ZoningPattern = "- custom -"
+   NumMCZnGrps = 0
+   UseFloorMults = 0
+   DiagLink = "Bldg Envelope & Loads 2 Diag Data"
+   VertExtConsType = "Wood Frame, 2x4, 24 in. o.c."
+   VertExtIntInsType = "1 in. polyisocyanurate (R-7)"
+   GrndFlrExposure = "Over Conditioned Space (adiabatic)"
+   GrndFlrPTSlab = 0
+   ZoningCurrent = 1
+   NumFloorVertices = 21
+   FloorVertX[1] = -83
+   FloorVertX[2] = -83
+   FloorVertX[3] = -17
+   FloorVertX[4] = -17
+   FloorVertX[5] = 33
+   FloorVertX[6] = 33
+   FloorVertX[7] = 18
+   FloorVertX[8] = 18
+   FloorVertX[9] = 10.55
+   FloorVertX[10] = -5
+   FloorVertX[11] = -5
+   FloorVertX[12] = 80
+   FloorVertX[13] = 80.5
+   FloorVertX[14] = 58.5
+   FloorVertX[15] = 58.5
+   FloorVertX[16] = 68
+   FloorVertX[17] = 68
+   FloorVertX[18] = -8
+   FloorVertX[19] = -8
+   FloorVertX[20] = -17
+   FloorVertX[21] = -16.7
+   FloorVertY[1] = 56
+   FloorVertY[2] = -23
+   FloorVertY[3] = -23
+   FloorVertY[4] = 5
+   FloorVertY[5] = 5
+   FloorVertY[6] = -4
+   FloorVertY[7] = -4
+   FloorVertY[8] = -41
+   FloorVertY[9] = -41
+   FloorVertY[10] = -41
+   FloorVertY[11] = -78
+   FloorVertY[12] = -78
+   FloorVertY[13] = -4
+   FloorVertY[14] = -4
+   FloorVertY[15] = 5
+   FloorVertY[16] = 5
+   FloorVertY[17] = 66
+   FloorVertY[18] = 66
+   FloorVertY[19] = 37
+   FloorVertY[20] = 37
+   FloorVertY[21] = 56
+   AdiabaticCurrent = 1
+   ZoneGroupsOK = 1
+   DfltZnGrpName[1] = "EL2 Underground Areas"
+   DfltZnGrpName[2] = "EL2 Ground Floor"
+   DfltZnGrpName[3] = "EL2 Ground Floor"
+   DfltZnGrpName[4] = "EL2 Typical Floor(s)"
+   DfltZnGrpName[5] = "EL2 Typical Floor(s)"
+   DfltZnGrpName[6] = "EL2 Top Floor"
+   DfltZnGrpName[7] = "EL2 Top Floor"
+   DfltZnGrpName[8] = "EL2 Data Center"
+   CustomFootprint = 1
+   CustomZoning = 1
+   ActiveZoneIndex = 12
+   CustomRoofZoning = -1
+   ActiveRoofZoneIdx = 1
+   FloorArea = 15827.8
+   FloorPerimLen = 803.804
+   LastFootprint = 1
+   WindowHeight[1] = 6
+   WinSillHeight[1] = 2
+   WinAreaSpecMethod = "Percent of Gross Wall Area (floor to floor)"
+   PercentGlassI1[1] = 40
+   PercentGlassI2[1] = 40
+   PercentGlassI3[1] = 40
+   PercentGlassI4[1] = 40
+   DoorType[1] = "- select another -"
+   DoorType[2] = "- select another -"
+   SkyZonesCurrent = 1
+   SkyltZones[1] = 1
+   SkyltZones[2] = 1
+   SkyltZones[3] = 1
+   SkyltZones[4] = 1
+   SkyltZones[5] = 1
+   SkyltZones[6] = 1
+   SkyltZones[7] = 1
+   SkyltZones[8] = 1
+   SkyltZones[9] = 1
+   SkyltZones[10] = 1
+   SkyltZones[11] = 1
+   SkyltZones[12] = 1
+   SkyltZones[13] = 1
+   SkyltZones[14] = 1
+   SkyltZones[15] = 1
+   SkyltZones[16] = 1
+   SkyltZones[17] = 1
+   SkyPosCurrent = 1
+   DayZonesCurrent = ( 1, 1, 1 )
+   DayltZones[1] = 1
+   DayltZones[2] = 1
+   DayltZones[3] = 1
+   DayltZones[4] = 1
+   DayltZones[5] = 0
+   DayltZones[6] = 1
+   DayltZones[7] = 1
+   DayltZones[8] = 1
+   DayltZones[9] = 1
+   DayltZones[10] = 0
+   DayltZones[11] = 1
+   DayltZones[12] = 1
+   DayltZones[13] = 1
+   DayltZones[14] = 1
+   DayltZones[15] = 0
+   DayltZones[16] = 1
+   DayltZones[17] = 1
+   DayltZones[201] = 1
+   DayltZones[202] = 1
+   DayltZones[203] = 1
+   DayltZones[204] = 1
+   DayltZones[205] = 0
+   DayltZones[206] = 1
+   DayltZones[207] = 1
+   DayltZones[208] = 1
+   DayltZones[209] = 1
+   DayltZones[210] = 0
+   DayltZones[211] = 1
+   DayltZones[212] = 1
+   DayltZones[213] = 1
+   DayltZones[214] = 1
+   DayltZones[215] = 0
+   DayltZones[216] = 1
+   DayltZones[217] = 1
+   DayltZones[401] = 1
+   DayltZones[402] = 1
+   DayltZones[403] = 1
+   DayltZones[404] = 1
+   DayltZones[405] = 0
+   DayltZones[406] = 1
+   DayltZones[407] = 1
+   DayltZones[408] = 1
+   DayltZones[409] = 1
+   DayltZones[410] = 0
+   DayltZones[411] = 1
+   DayltZones[412] = 1
+   DayltZones[413] = 1
+   DayltZones[414] = 1
+   DayltZones[415] = 0
+   DayltZones[416] = 1
+   DayltZones[417] = 1
+   WinDoorCurrent = 1
+   DetailsCurrent = ( 1, 1, 1 )
+   BDLNumDayltCtrls[1] = 0
+   BDLNumDayltCtrls[2] = 0
+   BDLNumDayltCtrls[3] = 0
+   BDLNumDayltCtrls[4] = 0
+   BDLNumDayltCtrls[5] = 0
+   BDLNumDayltCtrls[6] = 0
+   BDLNumDayltCtrls[7] = 0
+   BDLNumDayltCtrls[8] = 0
+   BDLNumDayltCtrls[9] = 0
+   BDLNumDayltCtrls[10] = 0
+   BDLNumDayltCtrls[11] = 0
+   BDLNumDayltCtrls[12] = 0
+   BDLNumDayltCtrls[13] = 0
+   BDLNumDayltCtrls[14] = 0
+   BDLNumDayltCtrls[15] = 0
+   BDLNumDayltCtrls[16] = 0
+   BDLNumDayltCtrls[17] = 0
+   BDLNumDayltCtrls[201] = 0
+   BDLNumDayltCtrls[202] = 0
+   BDLNumDayltCtrls[203] = 0
+   BDLNumDayltCtrls[204] = 0
+   BDLNumDayltCtrls[205] = 0
+   BDLNumDayltCtrls[206] = 0
+   BDLNumDayltCtrls[207] = 0
+   BDLNumDayltCtrls[208] = 0
+   BDLNumDayltCtrls[209] = 0
+   BDLNumDayltCtrls[210] = 0
+   BDLNumDayltCtrls[211] = 0
+   BDLNumDayltCtrls[212] = 0
+   BDLNumDayltCtrls[213] = 0
+   BDLNumDayltCtrls[214] = 0
+   BDLNumDayltCtrls[215] = 0
+   BDLNumDayltCtrls[216] = 0
+   BDLNumDayltCtrls[217] = 0
+   BDLNumDayltCtrls[401] = 0
+   BDLNumDayltCtrls[402] = 0
+   BDLNumDayltCtrls[403] = 0
+   BDLNumDayltCtrls[404] = 0
+   BDLNumDayltCtrls[405] = 0
+   BDLNumDayltCtrls[406] = 0
+   BDLNumDayltCtrls[407] = 0
+   BDLNumDayltCtrls[408] = 0
+   BDLNumDayltCtrls[409] = 0
+   BDLNumDayltCtrls[410] = 0
+   BDLNumDayltCtrls[411] = 0
+   BDLNumDayltCtrls[412] = 0
+   BDLNumDayltCtrls[413] = 0
+   BDLNumDayltCtrls[414] = 0
+   BDLNumDayltCtrls[415] = 0
+   BDLNumDayltCtrls[416] = 0
+   BDLNumDayltCtrls[417] = 0
+   ActAreaType[1] = "Residential (Multifamily Dwelling Unit)"
+   ActAreaType[2] = "- select another -"
+   ActAreaType[3] = "- select another -"
+   ActAreaType[4] = "- select another -"
+   PercentArea[1] = 100
+   SeasonType[1] = "Closed"
+   OccShape[1] = "EL2 Occup Profile (S1)"
+   ILShape[1] = "EL2 InsLtg Profile (S1)"
+   ELDayShapes = ( "EL2 ExtLtg DayShape (Jan)", 
+                   "EL2 ExtLtg DayShape (Feb)", 
+                   "EL2 ExtLtg DayShape (Mar)", 
+                   "EL2 ExtLtg DayShape (Apr)", 
+                   "EL2 ExtLtg DayShape (May)", 
+                   "EL2 ExtLtg DayShape (Jun)", 
+                   "EL2 ExtLtg DayShape (Jul)", 
+                   "EL2 ExtLtg DayShape (Aug)", 
+                   "EL2 ExtLtg DayShape (Sep)", 
+                   "EL2 ExtLtg DayShape (Oct)", 
+                   "EL2 ExtLtg DayShape (Nov)", 
+                   "EL2 ExtLtg DayShape (Dec)" )
+   OEShape[1] = "EL2 OffEq Profile (S1)"
+   CEShape[1] = "EL2 CookEq Profile (S1)"
+   MiscShape[1] = "EL2 Misc Profile (S1)"
+   DHWShape[1] = "EL2 DHW Profile (S1)"
+   SCRShape[1] = "EL2 S-C Refrig Profile (S1)"
+   DaylitAreaCurrent = ( 1, 1, 1 )
+   RoofZoneErrorCode = 4
+   ..
+
+ShapeWiz   "EL2 InsLtg Profile (S1)"  
+   ..
+
+DayShape   "EL2 ExtLtg DayShape (Jan)"  
+   ..
+
+DayShape   "EL2 ExtLtg DayShape (Feb)"  
+   ..
+
+DayShape   "EL2 ExtLtg DayShape (Mar)"  
+   ..
+
+DayShape   "EL2 ExtLtg DayShape (Apr)"  
+   ..
+
+DayShape   "EL2 ExtLtg DayShape (May)"  
+   ..
+
+DayShape   "EL2 ExtLtg DayShape (Jun)"  
+   ..
+
+DayShape   "EL2 ExtLtg DayShape (Jul)"  
+   ..
+
+DayShape   "EL2 ExtLtg DayShape (Aug)"  
+   ..
+
+DayShape   "EL2 ExtLtg DayShape (Sep)"  
+   ..
+
+DayShape   "EL2 ExtLtg DayShape (Oct)"  
+   ..
+
+DayShape   "EL2 ExtLtg DayShape (Nov)"  
+   ..
+
+DayShape   "EL2 ExtLtg DayShape (Dec)"  
+   ..
+
+ShapeWiz   "EL2 OffEq Profile (S1)"  
+   ..
+
+ShapeWiz   "EL2 Misc Profile (S1)"  
+   ..
+
+ShapeWiz   "EL2 DHW Profile (S1)"  
+   ..
+
+ShapeWiz   "EL2 Occup Profile (S1)"  
+   ..
+
+ShapeWiz   "EL2 CookEq Profile (S1)"  
+   ..
+
+ShapeWiz   "EL2 S-C Refrig Profile (S1)"  
+   ..
+
+ZnGrpWiz   "EL2 Ground Floor"  
+   ShortName = "GndFlr"
+   IsConditioned = 1
+   ..
+
+ZnGrpWiz   "EL2 Typical Floor(s)"  
+   ShortName = "TypFlr"
+   IsConditioned = 1
+   ..
+
+ZnGrpWiz   "EL2 Top Floor"  
+   ShortName = "TopFlr"
+   IsConditioned = 1
+   ..
+
+CustomZone   "Custom Zone 11"  
+   NumVerts = 5
+   X[1] = -17
+   X[2] = -45
+   X[3] = -45
+   X[4] = -17
+   X[5] = -17
+   Y[1] = 56
+   Y[2] = 36
+   Y[3] = 27.5
+   Y[4] = 27.5
+   Y[5] = 37
+   ..
+
+CustomZone   "Custom Zone 12"  
+   NumVerts = 4
+   X[1] = -17
+   X[2] = -83
+   X[3] = -52.95
+   X[4] = -45
+   Y[1] = 56
+   Y[2] = 56
+   Y[3] = 36
+   Y[4] = 36
+   ..
+
+CustomZone   "Custom Zone 13"  
+   NumVerts = 4
+   X[1] = -83
+   X[2] = -83
+   X[3] = -53
+   X[4] = -53
+   Y[1] = 56
+   Y[2] = -23
+   Y[3] = -3
+   Y[4] = 36
+   ..
+
+CustomZone   "Custom Zone 14"  
+   NumVerts = 6
+   X[1] = -53
+   X[2] = -83
+   X[3] = -17
+   X[4] = -17
+   X[5] = -45
+   X[6] = -45
+   Y[1] = -3
+   Y[2] = -23
+   Y[3] = -23
+   Y[4] = 5
+   Y[5] = 5
+   Y[6] = -3
+   ..
+
+CustomZone   "Custom Zone 16"  
+   NumVerts = 8
+   X[1] = -45
+   X[2] = -52.95
+   X[3] = -53
+   X[4] = -45
+   X[5] = -45
+   X[6] = -17
+   X[7] = -17
+   X[8] = -45
+   Y[1] = 36
+   Y[2] = 36
+   Y[3] = -3
+   Y[4] = -3
+   Y[5] = 5
+   Y[6] = 5
+   Y[7] = 27.5
+   Y[8] = 27.5
+   ..
+
+CustomZone   "Custom Zone 17"  
+   NumVerts = 4
+   X[1] = -8
+   X[2] = -8
+   X[3] = 40.4
+   X[4] = 68
+   Y[1] = 66
+   Y[2] = 37
+   Y[3] = 37
+   Y[4] = 66
+   ..
+
+CustomZone   "Custom Zone 18"  
+   NumVerts = 5
+   X[1] = 68
+   X[2] = 40.4
+   X[3] = 40.4
+   X[4] = 58.5
+   X[5] = 68
+   Y[1] = 66
+   Y[2] = 37
+   Y[3] = 5
+   Y[4] = 5
+   Y[5] = 5
+   ..
+
+CustomZone   "Custom Zone 19"  
+   NumVerts = 4
+   X[1] = 33
+   X[2] = -8
+   X[3] = -8
+   X[4] = 33
+   Y[1] = 30
+   Y[2] = 30
+   Y[3] = 5
+   Y[4] = 5
+   ..
+
+CustomZone   "Custom Zone 20"  
+   NumVerts = 6
+   X[1] = -8
+   X[2] = -17
+   X[3] = -17
+   X[4] = -17
+   X[5] = -8
+   X[6] = -8
+   Y[1] = 37
+   Y[2] = 37
+   Y[3] = 27.5
+   Y[4] = 5
+   Y[5] = 5
+   Y[6] = 30
+   ..
+
+CustomZone   "Custom Zone 21"  
+   NumVerts = 6
+   X[1] = 33
+   X[2] = 40.4
+   X[3] = 40.4
+   X[4] = -8
+   X[5] = -8
+   X[6] = 33
+   Y[1] = 5
+   Y[2] = 5
+   Y[3] = 37
+   Y[4] = 37
+   Y[5] = 30
+   Y[6] = 30
+   ..
+
+CustomZone   "Custom Zone 22"  
+   NumVerts = 7
+   X[1] = 58.5
+   X[2] = 40.4
+   X[3] = 33
+   X[4] = 33
+   X[5] = 44.5
+   X[6] = 52.5
+   X[7] = 58.5
+   Y[1] = 5
+   Y[2] = 5
+   Y[3] = 5
+   Y[4] = -4
+   Y[5] = -4
+   Y[6] = -4
+   Y[7] = -4
+   ..
+
+CustomZone   "Custom Zone 23"  
+   NumVerts = 6
+   X[1] = 33
+   X[2] = 18
+   X[3] = 18
+   X[4] = 18
+   X[5] = 44.5
+   X[6] = 44.5
+   Y[1] = -4
+   Y[2] = -4
+   Y[3] = -41
+   Y[4] = -42.5
+   Y[5] = -42.5
+   Y[6] = -4
+   ..
+
+CustomZone   "Custom Zone 24"  
+   NumVerts = 6
+   X[1] = 10.5
+   X[2] = 10.5
+   X[3] = -5
+   X[4] = -5
+   X[5] = 44.5
+   X[6] = 44.4
+   Y[1] = -48.85
+   Y[2] = -41
+   Y[3] = -41
+   Y[4] = -78
+   Y[5] = -78
+   Y[6] = -48.75
+   ..
+
+CustomZone   "Custom Zone 25"  
+   NumVerts = 5
+   X[1] = 80.5
+   X[2] = 58.5
+   X[3] = 52.5
+   X[4] = 52.5
+   X[5] = 80
+   Y[1] = -4
+   Y[2] = -4
+   Y[3] = -4
+   Y[4] = -78
+   Y[5] = -78
+   ..
+
+CustomZone   "Custom Zone 26"  
+   NumVerts = 4
+   X[1] = 44.5
+   X[2] = 44.5
+   X[3] = 52.5
+   X[4] = 52.5
+   Y[1] = -4
+   Y[2] = -42.5
+   Y[3] = -42.5
+   Y[4] = -4
+   ..
+
+CustomZone   "Custom Zone 27"  
+   NumVerts = 5
+   X[1] = 44.5
+   X[2] = 44.4
+   X[3] = 44.5
+   X[4] = 52.5
+   X[5] = 52.5
+   Y[1] = -42.5
+   Y[2] = -48.75
+   Y[3] = -78
+   Y[4] = -78
+   Y[5] = -42.5
+   ..
+
+CustomZone   "Custom Zone 28"  
+   NumVerts = 6
+   X[1] = 10.55
+   X[2] = 10.5
+   X[3] = 44.4
+   X[4] = 44.5
+   X[5] = 18
+   X[6] = 18
+   Y[1] = -41
+   Y[2] = -48.85
+   Y[3] = -48.75
+   Y[4] = -42.5
+   Y[5] = -42.5
+   Y[6] = -41
+   ..
+
+DiagData   "Bldg Envelope & Loads 1 Diag Data"  
+   PolyWndShowGrid = 1
+   PolyWndGridRes = 3
+   PolyWndLwrLeftX = -165
+   PolyWndLwrLeftY = -93
+   PolyWndWidth = 327.75
+   PolyWndSnapOrder[2] = 1
+   PolyWndSnapOrder[3] = 3
+   ShowCADLayer[1] = 1
+   ShowCADLayer[2] = 0
+   ShowCADLayer[3] = 1
+   ShowCADLayer[4] = 1
+   ShowCADLayer[5] = 1
+   ShowCADLayer[6] = 1
+   ShowCADLayer[7] = 1
+   ShowCADLayer[8] = 1
+   ShowCADLayer[9] = 1
+   ShowCADLayer[10] = 1
+   ShowCADLayer[11] = 1
+   ShowCADLayer[12] = 1
+   ShowCADLayer[13] = 1
+   ShowCADLayer[14] = 1
+   ShowCADLayer[15] = 1
+   ShowCADLayer[16] = 1
+   ShowCADLayer[17] = 1
+   ShowCADLayer[18] = 1
+   ShowCADLayer[19] = 1
+   ShowCADLayer[20] = 1
+   ShowCADLayer[21] = 1
+   ShowCADLayer[22] = 1
+   ShowCADLayer[23] = 1
+   ShowCADLayer[24] = 1
+   ShowCADLayer[25] = 1
+   ShowCADLayer[26] = 1
+   ShowCADLayer[27] = 1
+   ShowCADLayer[28] = 1
+   ShowCADLayer[29] = 1
+   ShowCADLayer[30] = 1
+   ShowCADLayer[31] = 1
+   ShowCADLayer[32] = 1
+   ShowCADLayer[33] = 1
+   ShowCADLayer[34] = 1
+   ShowCADLayer[35] = 1
+   ShowCADLayer[36] = 1
+   ShowCADLayer[37] = 1
+   ShowCADLayer[38] = 1
+   ShowCADLayer[39] = 1
+   ShowCADLayer[40] = 1
+   ShowCADLayer[41] = 1
+   ShowCADLayer[42] = 1
+   ShowCADLayer[43] = 1
+   ShowCADLayer[44] = 1
+   ShowCADLayer[45] = 1
+   ShowCADLayer[46] = 1
+   ShowCADLayer[47] = 1
+   ShowCADLayer[48] = 1
+   ShowCADLayer[49] = 1
+   ShowCADLayer[50] = 1
+   ShowCADLayer[51] = 1
+   ShowCADLayer[52] = 1
+   ShowCADLayer[53] = 1
+   ShowCADLayer[54] = 1
+   ShowCADLayer[55] = 1
+   ShowCADLayer[56] = 1
+   ShowCADLayer[57] = 1
+   ShowCADLayer[58] = 1
+   ShowCADLayer[59] = 1
+   ShowCADLayer[60] = 1
+   ShowCADLayer[61] = 1
+   ShowCADLayer[62] = 1
+   ShowCADLayer[63] = 0
+   ShowCADLayer[64] = 0
+   ShowCADLayer[65] = 0
+   ShowCADLayer[66] = 0
+   ShowCADLayer[67] = 0
+   ShowCADLayer[68] = 0
+   ShowCADLayer[69] = 0
+   ShowCADLayer[70] = 0
+   ShowCADLayer[71] = 0
+   ShowCADLayer[72] = 0
+   ShowCADLayer[73] = 0
+   ShowCADLayer[74] = 0
+   ShowCADLayer[75] = 0
+   ShowCADLayer[76] = 0
+   ShowCADLayer[77] = 0
+   ShowCADLayer[78] = 0
+   ShowCADLayer[79] = 0
+   ShowCADLayer[80] = 0
+   ShowCADLayer[81] = 0
+   ShowCADLayer[82] = 0
+   ShowCADLayer[83] = 0
+   ShowCADLayer[84] = 0
+   ShowCADLayer[85] = 0
+   ShowCADLayer[86] = 0
+   ShowCADLayer[87] = 0
+   ShowCADLayer[88] = 0
+   ShowCADLayer[89] = 0
+   ShowCADLayer[90] = 0
+   ShowCADLayer[91] = 0
+   ShowCADLayer[92] = 0
+   ShowCADLayer[93] = 0
+   ShowCADLayer[94] = 0
+   ShowCADLayer[95] = 0
+   ShowCADLayer[96] = 0
+   ShowCADLayer[97] = 0
+   ShowCADLayer[98] = 0
+   ShowCADLayer[99] = 0
+   ShowCADLayer[100] = 0
+   ShowCADLayer[101] = 0
+   ShowCADLayer[102] = 0
+   ShowCADLayer[103] = 0
+   ShowCADLayer[104] = 0
+   ShowCADLayer[105] = 0
+   ShowCADLayer[106] = 1
+   ShowCADLayer[107] = 0
+   ShowCADLayer[108] = 0
+   ShowCADLayer[109] = 0
+   ShowCADLayer[110] = 0
+   ShowCADLayer[111] = 0
+   ShowCADLayer[112] = 0
+   ShowCADLayer[113] = 1
+   ShowCADLayer[114] = 1
+   ShowCADLayer[115] = 1
+   ShowCADLayer[116] = 1
+   ShowCADLayer[117] = 1
+   ShowCADLayer[118] = 0
+   ShowCADLayer[119] = 0
+   ShowCADLayer[120] = 0
+   ShowCADLayer[121] = 0
+   ShowCADLayer[122] = 0
+   ShowCADLayer[123] = 0
+   ShowCADLayer[124] = 0
+   ShowCADLayer[125] = 0
+   ShowCADLayer[126] = 0
+   ShowCADLayer[127] = 0
+   ShowCADLayer[128] = 0
+   ShowCADLayer[129] = 0
+   ShowCADLayer[130] = 1
+   ShowCADLayer[131] = 1
+   ShowCADLayer[132] = 1
+   ShowCADLayer[133] = 0
+   ShowCADLayer[134] = 0
+   ShowCADLayer[135] = 0
+   ShowCADLayer[136] = 0
+   ShowCADLayer[137] = 0
+   ShowCADLayer[138] = 0
+   ShowCADLayer[139] = 0
+   ShowCADLayer[140] = 0
+   ShowCADLayer[141] = 0
+   ShowCADLayer[142] = 0
+   ShowCADLayer[143] = 1
+   ShowCADLayer[144] = 1
+   ShowCADLayer[145] = 1
+   ShowCADLayer[146] = 0
+   ShowCADLayer[147] = 0
+   ShowCADLayer[148] = 0
+   ShowCADLayer[149] = 0
+   ShowCADLayer[150] = 0
+   ShowCADLayer[151] = 0
+   ShowCADLayer[152] = 0
+   ShowCADLayer[153] = 0
+   ShowCADLayer[154] = 0
+   ShowCADLayer[155] = 0
+   ShowCADLayer[156] = 1
+   ShowCADLayer[157] = 1
+   ShowCADLayer[158] = 0
+   ShowCADLayer[159] = 1
+   ShowCADLayer[160] = 1
+   ShowCADLayer[161] = 1
+   ShowCADLayer[162] = 1
+   ShowCADLayer[163] = 1
+   ShowCADLayer[164] = 0
+   ShowCADLayer[165] = 1
+   ShowCADLayer[166] = 1
+   ShowCADLayer[167] = 1
+   ShowCADLayer[168] = 1
+   ShowCADLayer[169] = 0
+   ShowCADLayer[170] = 0
+   ShowCADLayer[171] = 0
+   ShowCADLayer[172] = 0
+   ShowCADLayer[173] = 0
+   ShowCADLayer[174] = 0
+   ShowCADLayer[175] = 1
+   ShowCADLayer[176] = 1
+   ShowCADLayer[177] = 0
+   ShowCADLayer[178] = 0
+   ShowCADLayer[179] = 0
+   ShowCADLayer[180] = 0
+   ShowCADLayer[181] = 0
+   ShowCADLayer[182] = 1
+   ShowCADLayer[183] = 1
+   ShowCADLayer[184] = 0
+   ShowCADLayer[185] = 0
+   ShowCADLayer[186] = 0
+   ShowCADLayer[187] = 0
+   ShowCADLayer[188] = 0
+   ShowCADLayer[189] = 0
+   ShowCADLayer[190] = 0
+   ShowCADLayer[191] = 0
+   ShowCADLayer[192] = 0
+   ShowCADLayer[193] = 0
+   ShowCADLayer[194] = 0
+   ShowCADLayer[195] = 0
+   ShowCADLayer[196] = 0
+   ShowCADLayer[197] = 0
+   ShowCADLayer[198] = 0
+   ShowCADLayer[199] = 0
+   ShowCADLayer[200] = 0
+   ShowCADLayer[201] = 0
+   ShowCADLayer[202] = 0
+   ShowCADLayer[203] = 0
+   ShowCADLayer[204] = 0
+   ShowCADLayer[205] = 0
+   ShowCADLayer[206] = 0
+   ShowCADLayer[207] = 0
+   ShowCADLayer[208] = 0
+   ShowCADLayer[209] = 0
+   ShowCADLayer[210] = 0
+   ShowCADLayer[211] = 0
+   ShowCADLayer[212] = 1
+   ShowCADLayer[213] = 0
+   ShowCADLayer[214] = 0
+   ShowCADLayer[215] = 0
+   ShowCADLayer[216] = 0
+   ShowCADLayer[217] = 0
+   ShowCADLayer[218] = 0
+   ShowCADLayer[219] = 0
+   ShowCADLayer[220] = 0
+   ShowCADLayer[221] = 0
+   ShowCADLayer[222] = 0
+   ShowCADLayer[223] = 0
+   ShowCADLayer[224] = 0
+   ShowCADLayer[225] = 0
+   ShowCADLayer[226] = 0
+   ShowCADLayer[227] = 0
+   ShowCADLayer[228] = 0
+   ShowCADLayer[229] = 0
+   ShowCADLayer[230] = 0
+   ShowCADLayer[231] = 0
+   ShowCADLayer[232] = 0
+   ShowCADLayer[233] = 0
+   ShowCADLayer[234] = 0
+   ShowCADLayer[235] = 0
+   ShowCADLayer[236] = 0
+   ShowCADLayer[237] = 0
+   ShowCADLayer[238] = 1
+   ShowCADLayer[239] = 1
+   ShowCADLayer[240] = 1
+   ShowCADLayer[241] = 1
+   CADFileComp = "1456_Xplan1 - DXF 2"
+   ..
+
+DiagData   "Bldg Envelope & Loads 2 Diag Data"  
+   PolyWndShowGrid = 1
+   PolyWndGridRes = 4
+   PolyWndLwrLeftX = -166
+   PolyWndLwrLeftY = -100
+   PolyWndWidth = 329
+   PolyWndSnapOrder = ( 2, 1, 0 )
+   ShowCADLayer[1] = 0
+   ShowCADLayer[2] = 0
+   ShowCADLayer[3] = 1
+   ShowCADLayer[4] = 1
+   ShowCADLayer[5] = 0
+   ShowCADLayer[6] = 0
+   ShowCADLayer[7] = 0
+   ShowCADLayer[8] = 1
+   ShowCADLayer[9] = 1
+   ShowCADLayer[10] = 0
+   ShowCADLayer[11] = 1
+   ShowCADLayer[12] = 1
+   ShowCADLayer[13] = 1
+   ShowCADLayer[14] = 0
+   ShowCADLayer[15] = 1
+   ShowCADLayer[16] = 1
+   ShowCADLayer[17] = 1
+   ShowCADLayer[18] = 0
+   ShowCADLayer[19] = 1
+   ShowCADLayer[20] = 0
+   ShowCADLayer[21] = 1
+   ShowCADLayer[22] = 1
+   ShowCADLayer[23] = 0
+   ShowCADLayer[24] = 1
+   ShowCADLayer[25] = 1
+   ShowCADLayer[26] = 1
+   ShowCADLayer[27] = 1
+   ShowCADLayer[28] = 1
+   ShowCADLayer[29] = 0
+   ShowCADLayer[30] = 1
+   ShowCADLayer[31] = 1
+   ShowCADLayer[32] = 0
+   ShowCADLayer[33] = 1
+   ShowCADLayer[34] = 1
+   ShowCADLayer[35] = 1
+   ShowCADLayer[36] = 1
+   ShowCADLayer[37] = 1
+   ShowCADLayer[38] = 1
+   ShowCADLayer[39] = 1
+   ShowCADLayer[40] = 1
+   ShowCADLayer[41] = 0
+   ShowCADLayer[42] = 1
+   ShowCADLayer[43] = 0
+   ShowCADLayer[44] = 0
+   ShowCADLayer[45] = 1
+   ShowCADLayer[46] = 0
+   ShowCADLayer[47] = 1
+   ShowCADLayer[48] = 1
+   ShowCADLayer[49] = 1
+   ShowCADLayer[50] = 1
+   ShowCADLayer[51] = 1
+   ShowCADLayer[52] = 1
+   ShowCADLayer[53] = 0
+   CADFileComp = "1456_Xplan2 - DXF"
+   ..
+
+CADFile   "1456_Xplan1 - DXF"  
+   ScaleUnits = 0
+   ScaleValue = 1
+   OriginX = 1074.02
+   OriginY = -770.664
+   Azimuth = 0
+   ..
+
+CADFile   "1456_Xplan1 - DXF 2"  
+   FileName = "Drawings\eQ\1456_Xplan1.dxf"
+   FilePathOffset = 2
+   ScaleUnits = 0
+   ScaleValue = 1
+   OriginX = 1126.51
+   OriginY = -792.692
+   Azimuth = 0
+   ..
+
+CADFile   "1456_Xplan2 - DXF"  
+   FileName = "Drawings\eQ\1456_Xplan2.dxf"
+   FilePathOffset = 2
+   ScaleUnits = 0
+   ScaleValue = 1
+   OriginX = 1116.81
+   OriginY = -790.489
+   Azimuth = 0
+   ..
+
+HVACWiz   "HVAC System 1"  
+   ScreenIDArrIdx = 0
+   ScreenIDArrID = 112
+   CoolSource[1] = "DX Coils"
+   HeatSource[1] = "DX Coils (Heat Pump)"
+   ..
+
+DXCWWiz   "Water-Cooled DX System"  
+   ..
+
+WSECWWiz   "Wtr-Side Econo System"  
+   ..
+
+WLHPWiz   "WSHP System"  
+   ..
+
+GSHPWiz   "GSHP System"  
+   ..
+
+PrimWiz   "Primary HVAC Plant"  
+   ..
+
+DHWWiz   "DHW Plant 1"  
+   ScreenIDArrIdx = 0
+   ..
+
+FacetColor   "By Wall Type"  
+   FacetType = "Walls"
+   ColorOption = "By Wall Type"
+   ..
+
+FacetColor   "By Construction"  
+   FacetType = "Walls"
+   ColorOption = "By Construction"
+   ..
+
+FacetColor   "Uniform"  
+   FacetType = "Windows"
+   ColorOption = "Uniform"
+   ..
+
+FacetColor   "By Glass Type"  
+   FacetType = "Windows"
+   ColorOption = "By Glass Type"
+   ..
+
+Light3D   "Light3D - Default"  
+   Type = "Default"
+   ..
+
+Light3D   "Light3D - User1"  
+   Type = "User Defined 1"
+   ..
+
+Light3D   "Light3D - User2"  
+   Type = "User Defined 2"
+   ..
+
+Light3D   "Light3D - User3"  
+   Type = "User Defined 3"
+   ..
+
+Light3D   "Light3D - User4"  
+   Type = "User Defined 4"
+   ..
+
+Light3D   "Light3D - User5"  
+   Type = "User Defined 5"
+   ..
+
+
+END_OF_FILE
