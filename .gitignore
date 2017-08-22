@@ -1,0 +1,38 @@
+# System files
+.DS_Store
+
+.commitLog
+
+*.sublime*
+*temp.*
+
+*.cal
+*.car
+
+*.BDL*
+*.CTL
+*.LOG
+*.STD
+*.pdl
+*.OUT
+
+*.DSM
+*.PLO
+*.SIM
+*.lin
+*.lrp
+*.nhk
+*.sin
+*.sr
+*.DSN
+
+*Baseline Design*
+*.pdh
+*.xeu
+
+# Parametric Runs
+*.prr
+* - [0-9].*
+* - Parms.*
+* - Parms mtr.*
+* - [0-9]_EG_MoEU_ED.*
