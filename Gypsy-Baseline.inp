@@ -1272,12 +1272,10 @@ $ ---------------------------------------------------------
    V6               = ( 0, 7.85 )
    ..
 "Polygon 59" = POLYGON         
-   V1               = ( 0, 0 )
-   V2               = ( 4.6, 0 )
-   V3               = ( 88.5, -0 )
-   V4               = ( 88.5, 24 )
-   V5               = ( 88.5, 27 )
-   V6               = ( 0, 27 )
+   V1               = ( 27, 88.5 )
+   V2               = ( 0, 88.5 )
+   V3               = ( 0, 66 )
+   V4               = ( 27, 66 )
    ..
 
 
@@ -2437,6 +2435,12 @@ SET-DEFAULT FOR WINDOW
    WIDTH            = 1.8614
    FRAME-CONDUCT    = 0.353
    SPACER-TYPE      = ALUMINUM
+   ..
+"Exterior Wall 205" = EXTERIOR-WALL   
+   CONSTRUCTION     = "90.1 2007 BL Roof Z2-8"
+   LOCATION         = TOP
+   POLYGON          = "Polygon 59"
+   SHADING-SURFACE  = YES
    ..
 "EL1 North Wall (G.SSW6.I23)" = INTERIOR-WALL   
    NEXT-TO          = "EL1 Core Spc (G.C8)"
