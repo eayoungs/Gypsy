@@ -4,7 +4,7 @@ Proj   "Gypsy"
    ProductCode = "eQUEST"
    WeatherFile = "TMY2\PORTLAOR.bin"
    CreateDate = 1446512138
-   ModDate = 1504390373
+   ModDate = 1504652974
    RunDate = 1466719701
    LibraryFile = "eQ_Lib.dat"
    ActiveMode = 0
@@ -1575,8 +1575,6 @@ CADFile   "1456_Xplan1 - DXF"
    ..
 
 CADFile   "1456_Xplan1 - DXF 2"  
-   FileName = "Drawings\eQ\1456_Xplan1.dxf"
-   FilePathOffset = 2
    ScaleUnits = 0
    ScaleValue = 1
    OriginX = 1126.51
@@ -1585,8 +1583,6 @@ CADFile   "1456_Xplan1 - DXF 2"
    ..
 
 CADFile   "1456_Xplan2 - DXF"  
-   FileName = "Drawings\eQ\1456_Xplan2.dxf"
-   FilePathOffset = 2
    ScaleUnits = 0
    ScaleValue = 1
    OriginX = 1116.81
