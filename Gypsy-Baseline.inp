@@ -500,6 +500,11 @@ $ ---------------------------------------------------------
    SUPPLY-HI        = 180
    SUPPLY-LO        = 150
    ..
+"Day Schedule 38" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 0.1, &D, &D, &D, &D, 0.25, 0.35, 1, 0.1, &D, &D, &D, 
+         &D, &D, &D, 0.25, 0.35, 1, &D, 0.35, 0.25, 0.1 )
+   ..
 
 $ ---------------------------------------------------------
 $              Week Schedules
@@ -595,6 +600,10 @@ $ ---------------------------------------------------------
    TYPE             = RESET-TEMP
    DAY-SCHEDULES    = ( "ASHRAE_90.1_07-ResetSch", &D, &D, &D, &D, 
          "ASHRAE_90.1_07-ResetSch" )
+   ..
+"Week Schedule 25" = WEEK-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   DAY-SCHEDULES    = ( "Day Schedule 38", &D, &D, &D, &D, "Day Schedule 38" )
    ..
 
 $ ---------------------------------------------------------
@@ -693,6 +702,12 @@ $ ---------------------------------------------------------
    ..
 "APARTMENTS FAN" = SCHEDULE-PD
    LIBRARY-ENTRY "APARTMENTS FAN"
+   ..
+"Annual Schedule 19" = SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   MONTH            = ( 12 )
+   DAY              = ( 31 )
+   WEEK-SCHEDULES   = ( "Week Schedule 25" )
    ..
 
 
@@ -6042,8 +6057,10 @@ $ ---------------------------------------------------------
 "EM1" = ELEC-METER      
    TYPE             = UTILITY
    INTERIOR-POWER   = ( 0.1865, 3.73 )
-   INTERIOR-SCH     = ( "ZG0-S1 (PSZ) P-Inf Sch" )
+   INTERIOR-SCH     = ( "ZG0-S1 (PSZ) P-Inf Sch", "Annual Schedule 19" )
    INTERIOR-EU      = ( EXT-USAGE, EXT-USAGE )
+   EXTERIOR-POWER   = ( 2.42 )
+   EXTERIOR-SCH     = ( "Annual Schedule 19" )
    ..
 
 

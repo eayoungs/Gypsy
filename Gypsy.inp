@@ -6037,6 +6037,8 @@ $ ---------------------------------------------------------
    INTERIOR-POWER   = ( 0.1865, 3.73 )
    INTERIOR-SCH     = ( "ZG0-S1 (PSZ) P-Inf Sch", "Annual Schedule 17" )
    INTERIOR-EU      = ( EXT-USAGE, EXT-USAGE )
+   EXTERIOR-POWER   = ( 2.42 )
+   EXTERIOR-SCH     = ( "Annual Schedule 17" )
    ..
 
 

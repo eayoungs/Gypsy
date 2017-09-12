@@ -4,11 +4,11 @@ Proj   "Gypsy-Baseline"
    ProductCode = "eQUEST"
    WeatherFile = "TMY2\PORTLAOR.bin"
    CreateDate = 1446512138
-   ModDate = 1473972103
+   ModDate = 1505183001
    RunDate = 1473875751
    LibraryFile = "eQ_Lib.dat"
    ActiveMode = 0
-   InputModule = 4
+   InputModule = 5
    ComplianceRules = "LEED-NC - v3.0 (LEED.bin)"
    UseCameraData = 1
    ClippingRange = ( 118.427, 511.437 )
@@ -1574,8 +1574,6 @@ CADFile   "1456_Xplan1 - DXF"
    ..
 
 CADFile   "1456_Xplan1 - DXF 2"  
-   FileName = "Drawings\eQ\1456_Xplan1.dxf"
-   FilePathOffset = 2
    ScaleUnits = 0
    ScaleValue = 1
    OriginX = 1126.51
@@ -1584,8 +1582,6 @@ CADFile   "1456_Xplan1 - DXF 2"
    ..
 
 CADFile   "1456_Xplan2 - DXF"  
-   FileName = "Drawings\eQ\1456_Xplan2.dxf"
-   FilePathOffset = 2
    ScaleUnits = 0
    ScaleValue = 1
    OriginX = 1116.81
