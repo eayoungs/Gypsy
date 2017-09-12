@@ -23,4 +23,6 @@
 		PARAMETRIC_COMPONENT ,"Exterior Lighting" ,BDLCOMKEY ,ELEC-METER       ,       1,       1,       1,ALL ,TRUE ,
 			PARAMETRIC_KEYWORD ,EXTERIOR-POWER ,       1,    0.819,
 			PARAMETRIC_KEYWORD ,EXTERIOR-SCH ,       1,"Annual Schedule 17" ,
+		PARAMETRIC_COMPONENT ,"Roof Deck" ,BDLCOMKEY ,EXTERIOR-WALL    ,       0,       0,       0,LIST ,       1,"Exterior Wall 205" ,TRUE ,
+			PARAMETRIC_KEYWORD ,CONSTRUCTION ,      -1,"Prop_Roof_Deck-CNS" ,
 PARAMETRIC_END ,

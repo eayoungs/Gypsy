@@ -174,6 +174,9 @@ $ ---------------------------------------------------------
 "Com Brick 4in (BK01)" = MATERIAL        
    LIBRARY-ENTRY "Com Brick 4in (BK01)"
    ..
+"MinWool Batt R11 (IN02)" = MATERIAL        
+   LIBRARY-ENTRY "MinWool Batt R11 (IN02)"
+   ..
 
 "90.1 2007 BL W Z4-8" = LAYERS          
    MATERIAL         = ( "90.1 2007 Stucco", "90.1 2007 Gyp Board", 
@@ -220,6 +223,10 @@ $ ---------------------------------------------------------
    MATERIAL         = ( "Com Brick 4in (BK01)", "Air Lay <4in Vert (AL21)", 
          "MinBd 2in R-6.9 (IN23)", "Plastic Film Seal (BP03)", 
          "Plywd 1/2in (PW03)", "MinWool Batt R21", "GypBd 5/8in (GP02)" )
+   ..
+"Prop_Roof_Deck-LYR" = LAYERS          
+   MATERIAL         = ( "Blt-Up Roof 3/8in (BR01)", "Plywd 5/8in (PW04)", 
+         "MinWool Batt R11 (IN02)", "GypBd 5/8in (GP02)" )
    ..
 
 "90.1 2007 BL Wall Z4-8" = CONSTRUCTION    
@@ -279,6 +286,12 @@ $ ---------------------------------------------------------
 "GrndFlr_ExtWall-CNS" = CONSTRUCTION    
    TYPE             = LAYERS
    LAYERS           = "GrndFlr_ExtWall-LYR"
+   ..
+"Prop_Roof_Deck-CNS" = CONSTRUCTION    
+   TYPE             = LAYERS
+   ABSORPTANCE      = 0.6
+   ROUGHNESS        = 1
+   LAYERS           = "Prop_Roof_Deck-LYR"
    ..
 
 
@@ -1265,12 +1278,10 @@ $ ---------------------------------------------------------
    V6               = ( 0, 7.85 )
    ..
 "Polygon 59" = POLYGON         
-   V1               = ( 0, 0 )
-   V2               = ( 4.6, 0 )
-   V3               = ( 88.5, -0 )
-   V4               = ( 88.5, 24 )
-   V5               = ( 88.5, 27 )
-   V6               = ( 0, 27 )
+   V1               = ( 27, 88.5 )
+   V2               = ( 0, 88.5 )
+   V3               = ( 0, 66 )
+   V4               = ( 27, 66 )
    ..
 
 
@@ -2430,6 +2441,12 @@ SET-DEFAULT FOR WINDOW
    WIDTH            = 1.8614
    FRAME-CONDUCT    = 0.353
    SPACER-TYPE      = ALUMINUM
+   ..
+"Exterior Wall 205" = EXTERIOR-WALL   
+   CONSTRUCTION     = "90.1 2007 BL Roof Z2-8"
+   LOCATION         = TOP
+   POLYGON          = "Polygon 59"
+   SHADING-SURFACE  = YES
    ..
 "EL1 North Wall (G.SSW6.I23)" = INTERIOR-WALL   
    NEXT-TO          = "EL1 Core Spc (G.C8)"

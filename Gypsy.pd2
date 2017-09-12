@@ -4,16 +4,24 @@ Proj   "Gypsy"
    ProductCode = "eQUEST"
    WeatherFile = "TMY2\PORTLAOR.bin"
    CreateDate = 1446512138
+<<<<<<< HEAD
    ModDate = 1504652974
    RunDate = 1466719701
    LibraryFile = "eQ_Lib.dat"
    ActiveMode = 0
    InputModule = 5
+=======
+   ModDate = 1504124800
+   RunDate = 1466719701
+   LibraryFile = "eQ_Lib.dat"
+   ActiveMode = 0
+   InputModule = 1
+>>>>>>> roof_deck
    ComplianceRules = "LEED-NC - v3.0 (LEED.bin)"
    UseCameraData = 1
    ClippingRange = ( 118.427, 511.437 )
    FocalPoint = ( -1.22502, -6.70075, 44.5293 )
-   Position = ( -87.3067, -149.963, 264.205 )
+   Position = ( -29.1592, -127.694, 291.049 )
    ViewUpVector = ( 0, 0, 1 )
    ViewAngle = 33.5907
    InterfaceMode = 1
@@ -24,9 +32,9 @@ Proj   "Gypsy"
    PreviousName = "Gypsy-BaseTest"
    DetailedModelEdits = 1
    ProjTreeType = ( 0, 1, 1, 1, 1, 1 )
-   ProjTreeID = ( 10000, 10120000, 10080000, 10670000, 10480001, 
+   ProjTreeID = ( 10000, 10060014, 10080000, 10670000, 10550006, 
                   10750000 )
-   ProjTreeLabel = ( "Project:  'Gypsy'", "EL1 West Win (G.NNE1.E1.W1)", 
+   ProjTreeLabel = ( "Project:  'Gypsy'", "Prop_Roof_Deck-CNS", 
                      "Commercial_GrnFlr_1-SPC", 
                      "DHW Plant 1 Res Wtr Htr (1)", 
                      "EL1 Sys1 (PSZ) (G.SSW6)", "EM1" )
