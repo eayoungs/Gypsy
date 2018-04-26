@@ -4,19 +4,11 @@ Proj   "Gypsy"
    ProductCode = "eQUEST"
    WeatherFile = "TMY2\PORTLAOR.bin"
    CreateDate = 1446512138
-<<<<<<< HEAD
    ModDate = 1504652974
    RunDate = 1466719701
    LibraryFile = "eQ_Lib.dat"
    ActiveMode = 0
    InputModule = 5
-=======
-   ModDate = 1504124800
-   RunDate = 1466719701
-   LibraryFile = "eQ_Lib.dat"
-   ActiveMode = 0
-   InputModule = 1
->>>>>>> roof_deck
    ComplianceRules = "LEED-NC - v3.0 (LEED.bin)"
    UseCameraData = 1
    ClippingRange = ( 118.427, 511.437 )
