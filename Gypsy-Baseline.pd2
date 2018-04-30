@@ -4,11 +4,11 @@ Proj   "Gypsy-Baseline"
    ProductCode = "eQUEST"
    WeatherFile = "TMY2\PORTLAOR.bin"
    CreateDate = 1446512138
-   ModDate = 1504049088
+   ModDate = 1525130970
    RunDate = 1473875751
    LibraryFile = "eQ_Lib.dat"
    ActiveMode = 0
-   InputModule = 1
+   InputModule = 2
    ComplianceRules = "LEED-NC - v3.0 (LEED.bin)"
    UseCameraData = 1
    ClippingRange = ( 118.427, 511.437 )
@@ -24,12 +24,12 @@ Proj   "Gypsy-Baseline"
    PreviousName = "Gypsy-TestBase"
    DetailedModelEdits = 1
    ProjTreeType = ( 0, 1, 1, 1, 1, 1 )
-   ProjTreeID = ( 10000, 10130005, 10080001, 10630001, 10550026, 
+   ProjTreeID = ( 10000, 10130005, 10080001, 10630001, 10550062, 
                   10750000 )
    ProjTreeLabel = ( "Project:  'Gypsy-TestBase'", 
                      "EL1 West Wall (G.ESE2.I8)", 
                      "Commercial_GrnFlr_2-SPC", "ASHRAE-G3.1.3.5", 
-                     "EL1 Sys1 (PSZ) (G.SSW6)", "EM1" )
+                     "EL1 Core Zn (G.C8)", "EM1" )
    ..
 
 MainWiz   "Gypsy-Baseline"  
