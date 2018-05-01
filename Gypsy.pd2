@@ -4,7 +4,7 @@ Proj   "Gypsy"
    ProductCode = "eQUEST"
    WeatherFile = "TMY2\PORTLAOR.bin"
    CreateDate = 1446512138
-   ModDate = 1525132801
+   ModDate = 1525220181
    RunDate = 1466719701
    LibraryFile = "eQ_Lib.dat"
    ActiveMode = 0
@@ -24,9 +24,9 @@ Proj   "Gypsy"
    PreviousName = "Gypsy-BaseTest"
    DetailedModelEdits = 1
    ProjTreeType = ( 0, 1, 1, 1, 1, 1 )
-   ProjTreeID = ( 10000, 10100089, 10080000, 10670000, 10550006, 
+   ProjTreeID = ( 10000, 10130024, 10080000, 10670000, 10550006, 
                   10750000 )
-   ProjTreeLabel = ( "Project:  'Gypsy'", "EL1 North Wall (G.N7.E44)", 
+   ProjTreeLabel = ( "Project:  'Gypsy'", "EL1 South Wall (G.WNW11.I38)", 
                      "Commercial_GrnFlr_1-SPC", 
                      "DHW Plant 1 Res Wtr Htr (1)", 
                      "EL1 Sys1 (PSZ) (G.SSW6)", "EM1" )
@@ -1254,9 +1254,9 @@ CustomZone   "Custom Zone 28"
 DiagData   "Bldg Envelope & Loads 1 Diag Data"  
    PolyWndShowGrid = 1
    PolyWndGridRes = 3
-   PolyWndLwrLeftX = -165
-   PolyWndLwrLeftY = -93
-   PolyWndWidth = 327.75
+   PolyWndLwrLeftX = -87.6
+   PolyWndLwrLeftY = 10.4
+   PolyWndWidth = 114.257
    PolyWndSnapOrder[2] = 1
    PolyWndSnapOrder[3] = 3
    ShowCADLayer[1] = 1

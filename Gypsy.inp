@@ -876,10 +876,10 @@ $ ---------------------------------------------------------
    ..
 "EL1 Space Polygon 11" = POLYGON         
    V1               = ( 0, 0 )
-   V2               = ( 47, 0 )
+   V2               = ( 47, 3.8147e-006 )
    V3               = ( 47, 5.1 )
-   V4               = ( 47, 25 )
-   V5               = ( 0, 25 )
+   V4               = ( 47, 40 )
+   V5               = ( 0, 40 )
    ..
 "EL2 Floor Polygon" = POLYGON         
    V1               = ( -83, 56 )
@@ -1454,12 +1454,157 @@ $ ---------------------------------------------------------
    V6               = ( 14, -54 )
    ..
 "Mirror Poly 22" = POLYGON         
-   V1               = ( -54, 64 )
+   V1               = ( -54, 49 )
    V2               = ( -54, 14 )
    V3               = ( -20.5, 14 )
    V4               = ( -20.5, 23 )
    V5               = ( -7, 23 )
-   V6               = ( -7, 64 )
+   V6               = ( -7, 49 )
+   ..
+"Mirror Poly 23" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 41, 2 )
+   V3               = ( 41, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Mirror Poly 24" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 41, 2 )
+   V3               = ( 41, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Mirror Poly 25" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 41, 2 )
+   V3               = ( 47, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Mirror Poly 26" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 47, 2 )
+   V3               = ( 47, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Mirror Poly 27" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 47, 0 )
+   V3               = ( 47, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Mirror Poly 22 - SMirro" = POLYGON         
+   V1               = ( 64, -43 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -43 )
+   ..
+"Mirror Poly 28" = POLYGON         
+   V1               = ( 64, -43 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 29" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -43 )
+   ..
+"Mirror Poly 30" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 0, -54 )
+   ..
+"Mirror Poly 31" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 0, -20.5 )
+   V6               = ( 0, -54 )
+   ..
+"Mirror Poly 32" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 0, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 33" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 8, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 34" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -5.5 )
+   V5               = ( 14, -5.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 35" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -18 )
+   V3               = ( 23, -18 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 36" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -18 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 37" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 49, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 38" = POLYGON         
+   V1               = ( 49, -54 )
+   V2               = ( 49, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 39" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 47, 0 )
+   V3               = ( 40, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Mirror Poly 40" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 40, 0 )
+   V3               = ( 40, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
    ..
 
 
@@ -2717,15 +2862,10 @@ SET-DEFAULT FOR WINDOW
    FRAME-CONDUCT    = 0.353
    SPACER-TYPE      = ALUMINUM
    ..
-"EL1 West Wall (G.N7.I25)" = INTERIOR-WALL   
-   NEXT-TO          = "EL1 WNW Perim Spc (G.WNW11)"
-   CONSTRUCTION     = "EL1 IWall Construction"
-   LOCATION         = SPACE-V7
-   ..
 "EL1 South Wall (G.N7.I26)" = INTERIOR-WALL   
    NEXT-TO          = "EL1 Core Spc (G.C8)"
-   CONSTRUCTION     = "EL1 IWall Construction"
-   LOCATION         = SPACE-V8
+   CONSTRUCTION     = "EL2 IFlr Construction"
+   LOCATION         = TOP
    ..
 "EL1 Core Spc (G.C8)" = SPACE           
    SHAPE            = POLYGON
@@ -3061,10 +3201,15 @@ SET-DEFAULT FOR WINDOW
    CONSTRUCTION     = "EL1 GFlr Construction"
    LOCATION         = BOTTOM
    ..
+"EL1 West Wall (G.N7.I25)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 WNW Perim Spc (G.WNW11)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V7
+   ..
 "EL1 East Wall (G.N7.I27)" = INTERIOR-WALL   
    NEXT-TO          = "EL1 Core Spc (G.C9)"
    CONSTRUCTION     = "EL1 IWall Construction"
-   LOCATION         = SPACE-V9
+   LOCATION         = SPACE-V5
    ..
 "EL2 Ground Flr" = FLOOR           
    Z                = 16.17
