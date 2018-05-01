@@ -2664,7 +2664,7 @@ SET-DEFAULT FOR WINDOW
    ..
 "EL1 North Wall (G.N7.E44)" = EXTERIOR-WALL   
    CONSTRUCTION     = "90.1 2007 BL Wall Z4-8"
-   LOCATION         = SPACE-V4
+   LOCATION         = SPACE-V3
    SHADING-SURFACE  = YES
    ..
 "EL1 North Win (G.N7.E44.W1)" = WINDOW          
