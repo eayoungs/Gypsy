@@ -4,18 +4,18 @@ Proj   "Gypsy"
    ProductCode = "eQUEST"
    WeatherFile = "TMY2\PORTLAOR.bin"
    CreateDate = 1446512138
-   ModDate = 1525220181
+   ModDate = 1525813004
    RunDate = 1466719701
    LibraryFile = "eQ_Lib.dat"
    ActiveMode = 0
    InputModule = 1
    ComplianceRules = "LEED-NC - v3.0 (LEED.bin)"
    UseCameraData = 1
-   ClippingRange = ( 118.427, 511.437 )
+   ClippingRange = ( 0.828147, 828.147 )
    FocalPoint = ( -1.22502, -6.70075, 44.5293 )
-   Position = ( -29.1592, -127.694, 291.049 )
+   Position = ( 16.7414, 198.647, -54.8312 )
    ViewUpVector = ( 0, 0, 1 )
-   ViewAngle = 33.5907
+   ViewAngle = 33.1099
    InterfaceMode = 1
    AllowWizard = 1
    NotProjFile = "Gypsy"
@@ -24,9 +24,9 @@ Proj   "Gypsy"
    PreviousName = "Gypsy-BaseTest"
    DetailedModelEdits = 1
    ProjTreeType = ( 0, 1, 1, 1, 1, 1 )
-   ProjTreeID = ( 10000, 10130024, 10080000, 10670000, 10550006, 
+   ProjTreeID = ( 10000, 10080000, 10080000, 10670000, 10550006, 
                   10750000 )
-   ProjTreeLabel = ( "Project:  'Gypsy'", "EL1 South Wall (G.WNW11.I38)", 
+   ProjTreeLabel = ( "Project:  'Gypsy'", "Commercial_GrnFlr_1-SPC", 
                      "Commercial_GrnFlr_1-SPC", 
                      "DHW Plant 1 Res Wtr Htr (1)", 
                      "EL1 Sys1 (PSZ) (G.SSW6)", "EM1" )
@@ -1254,9 +1254,9 @@ CustomZone   "Custom Zone 28"
 DiagData   "Bldg Envelope & Loads 1 Diag Data"  
    PolyWndShowGrid = 1
    PolyWndGridRes = 3
-   PolyWndLwrLeftX = -87.6
-   PolyWndLwrLeftY = 10.4
-   PolyWndWidth = 114.257
+   PolyWndLwrLeftX = -169
+   PolyWndLwrLeftY = -89
+   PolyWndWidth = 333.25
    PolyWndSnapOrder[2] = 1
    PolyWndSnapOrder[3] = 3
    ShowCADLayer[1] = 1

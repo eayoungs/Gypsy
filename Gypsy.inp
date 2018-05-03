@@ -2829,7 +2829,7 @@ SET-DEFAULT FOR WINDOW
    ..
 "EL1 East Wall (G.N7.E45)" = EXTERIOR-WALL   
    CONSTRUCTION     = "90.1 2007 BL Wall Z4-8"
-   LOCATION         = SPACE-V5
+   LOCATION         = SPACE-V4
    SHADING-SURFACE  = YES
    ..
 "EL1 East Win (G.N7.E45.W1)" = WINDOW          
@@ -2845,11 +2845,11 @@ SET-DEFAULT FOR WINDOW
 "EL1 North Slab (G.N7.S46)" = EXTERIOR-WALL   
    CONSTRUCTION     = "EL1 GFSHL Construction"
    HEIGHT           = 0.5
-   LOCATION         = SPACE-V6
+   LOCATION         = SPACE-V5
    ..
 "EL1 North Wall (G.N7.E46)" = EXTERIOR-WALL   
    CONSTRUCTION     = "90.1 2007 BL Wall Z4-8"
-   LOCATION         = SPACE-V6
+   LOCATION         = SPACE-V5
    SHADING-SURFACE  = YES
    ..
 "EL1 North Win (G.N7.E46.W1)" = WINDOW          
@@ -2862,10 +2862,15 @@ SET-DEFAULT FOR WINDOW
    FRAME-CONDUCT    = 0.353
    SPACER-TYPE      = ALUMINUM
    ..
-"EL1 South Wall (G.N7.I26)" = INTERIOR-WALL   
-   NEXT-TO          = "EL1 Core Spc (G.C8)"
-   CONSTRUCTION     = "EL2 IFlr Construction"
-   LOCATION         = TOP
+"EL1 West Wall (G.N7.I25)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 WNW Perim Spc (G.WNW11)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"Interior Wall 223" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 WNW Perim Spc (G.WNW11)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V1
    ..
 "EL1 Core Spc (G.C8)" = SPACE           
    SHAPE            = POLYGON
@@ -3201,15 +3206,23 @@ SET-DEFAULT FOR WINDOW
    CONSTRUCTION     = "EL1 GFlr Construction"
    LOCATION         = BOTTOM
    ..
-"EL1 West Wall (G.N7.I25)" = INTERIOR-WALL   
-   NEXT-TO          = "EL1 WNW Perim Spc (G.WNW11)"
-   CONSTRUCTION     = "EL1 IWall Construction"
-   LOCATION         = SPACE-V7
-   ..
 "EL1 East Wall (G.N7.I27)" = INTERIOR-WALL   
    NEXT-TO          = "EL1 Core Spc (G.C9)"
    CONSTRUCTION     = "EL1 IWall Construction"
    LOCATION         = SPACE-V5
+   ..
+"Interior Wall 224" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 Core Spc (G.C9)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   WIDTH            = 14
+   LOCATION         = SPACE-V4
+   ..
+"Interior Wall 225" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 Core Spc (G.C9)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   X                = -20
+   WIDTH            = 33.5
+   LOCATION         = SPACE-V3
    ..
 "EL2 Ground Flr" = FLOOR           
    Z                = 16.17
