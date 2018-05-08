@@ -933,8 +933,8 @@ $ ---------------------------------------------------------
    ..
 "EL2 Space Polygon 5" = POLYGON         
    V1               = ( 0, 0 )
-   V2               = ( 22.5, -0 )
-   V3               = ( 22.5, 28 )
+   V2               = ( 9.5, -0 )
+   V3               = ( 9.5, 28 )
    V4               = ( 31, 28 )
    V5               = ( 31, 35.95 )
    V6               = ( -8, 36 )
@@ -1605,6 +1605,52 @@ $ ---------------------------------------------------------
    V3               = ( 40, 47 )
    V4               = ( 5.1, 47 )
    V5               = ( 3.8147e-006, 47 )
+   ..
+"Elev / Comm Space Polygon" = POLYGON         
+   V1               = ( 9.5, 0 )
+   V2               = ( 22.5, -0 )
+   V3               = ( 22.5, 28 )
+   V4               = ( 9.5, 28 )
+   ..
+"Mirror Poly 41" = POLYGON         
+   V1               = ( 0, 13 )
+   V2               = ( 28, 0 )
+   V3               = ( 28, -8 )
+   V4               = ( 36, -8 )
+   V5               = ( 35.95, 31 )
+   V6               = ( 28, 31 )
+   V7               = ( 28, 22.5 )
+   V8               = ( -0, 22.5 )
+   ..
+"Mirror Poly 42" = POLYGON         
+   V1               = ( 13, 0 )
+   V2               = ( 28, 0 )
+   V3               = ( 28, -8 )
+   V4               = ( 36, -8 )
+   V5               = ( 35.95, 31 )
+   V6               = ( 28, 31 )
+   V7               = ( 28, 22.5 )
+   V8               = ( -0, 22.5 )
+   ..
+"Mirror Poly 43" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 28, 0 )
+   V3               = ( 28, -8 )
+   V4               = ( 36, -8 )
+   V5               = ( 35.95, 31 )
+   V6               = ( 28, 31 )
+   V7               = ( 28, 22.5 )
+   V8               = ( -0, 9.5 )
+   ..
+"Mirror Poly 44" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 28, 0 )
+   V3               = ( 28, -8 )
+   V4               = ( 36, -8 )
+   V5               = ( 35.95, 31 )
+   V6               = ( 28, 31 )
+   V7               = ( 28, 9.5 )
+   V8               = ( -0, 9.5 )
    ..
 
 
@@ -3212,13 +3258,13 @@ SET-DEFAULT FOR WINDOW
    LOCATION         = SPACE-V5
    ..
 "Interior Wall 224" = INTERIOR-WALL   
-   NEXT-TO          = "EL1 Core Spc (G.C9)"
+   NEXT-TO          = "EL1 Core Spc (G.C8)"
    CONSTRUCTION     = "EL1 IWall Construction"
    WIDTH            = 14
    LOCATION         = SPACE-V4
    ..
 "Interior Wall 225" = INTERIOR-WALL   
-   NEXT-TO          = "EL1 Core Spc (G.C9)"
+   NEXT-TO          = "EL1 North Perim Spc (G.N7)"
    CONSTRUCTION     = "EL1 IWall Construction"
    X                = -20
    WIDTH            = 33.5
@@ -3495,13 +3541,15 @@ SET-DEFAULT FOR WINDOW
    LOCATION         = SPACE-V1
    ..
 "EL2 North Wall (G.C5.I16)" = INTERIOR-WALL   
-   NEXT-TO          = "EL2 East Perim Spc (G.E1)"
+   NEXT-TO          = "Elevator / Comm"
    CONSTRUCTION     = "EL1 IWall Construction"
    LOCATION         = SPACE-V2
    ..
 "EL2 East Wall (G.C5.I17)" = INTERIOR-WALL   
    NEXT-TO          = "EL2 East Perim Spc (G.E1)"
    CONSTRUCTION     = "EL1 IWall Construction"
+   X                = 22.5
+   WIDTH            = 8.5
    LOCATION         = SPACE-V3
    ..
 "EL2 North Wall (G.C5.I18)" = INTERIOR-WALL   
@@ -4281,6 +4329,40 @@ SET-DEFAULT FOR WINDOW
    NEXT-TO          = "EL2 Core Spc (M.C34)"
    CONSTRUCTION     = "EL1 Ceilg Construction"
    LOCATION         = TOP
+   ..
+"Elevator / Comm" = SPACE           
+   X                = -17
+   Y                = 5
+   AZIMUTH          = -90
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   LIGHTING-SCHEDUL = ( "EStarMFHR_Non-Apt_LTG-Ann" )
+   INF-SCHEDULE     = "ZG0-S1 (PSZ) C-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.001
+   LIGHTING-W/AREA  = ( 0.66 )
+   POLYGON          = "Elev / Comm Space Polygon"
+   C-SCHEDULE-TYPE  = 3
+   C-SUB-AREA       = ( 941.02 )
+   C-OCC-TYPE       = ( 22 )
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-HTG-SYS-CLASS  = 2
+   ..
+"Interior Wall 226" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 East Perim Spc (G.E1)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"Interior Wall 227" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 Core Spc (G.C5)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"Interior Wall 228" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 West Perim Spc (G.W9)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V1
    ..
 "EL2 Mid Flr" = FLOOR           
    Z                = 26.87
@@ -7710,6 +7792,12 @@ SET-DEFAULT FOR ZONE
    OUTSIDE-AIR-FLOW = 0.09
    SIZING-OPTION    = ADJUST-LOADS
    SPACE            = "EL1 Core Spc (G.C8)"
+   C-COMPLIANCE-DHW = "Res Compliance DHW"
+   ..
+"Thermal Zone 64" = ZONE            
+   TYPE             = UNCONDITIONED
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "Elevator / Comm"
    C-COMPLIANCE-DHW = "Res Compliance DHW"
    ..
 "RTU-2" = SYSTEM          

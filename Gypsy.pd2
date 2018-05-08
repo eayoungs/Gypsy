@@ -4,7 +4,7 @@ Proj   "Gypsy"
    ProductCode = "eQUEST"
    WeatherFile = "TMY2\PORTLAOR.bin"
    CreateDate = 1446512138
-   ModDate = 1525813004
+   ModDate = 1525824156
    RunDate = 1466719701
    LibraryFile = "eQ_Lib.dat"
    ActiveMode = 0
@@ -24,12 +24,12 @@ Proj   "Gypsy"
    PreviousName = "Gypsy-BaseTest"
    DetailedModelEdits = 1
    ProjTreeType = ( 0, 1, 1, 1, 1, 1 )
-   ProjTreeID = ( 10000, 10080000, 10080000, 10670000, 10550006, 
+   ProjTreeID = ( 10000, 10080016, 10080000, 10670000, 10550063, 
                   10750000 )
-   ProjTreeLabel = ( "Project:  'Gypsy'", "Commercial_GrnFlr_1-SPC", 
+   ProjTreeLabel = ( "Project:  'Gypsy'", "EL2 Core Spc (G.C5)", 
                      "Commercial_GrnFlr_1-SPC", 
-                     "DHW Plant 1 Res Wtr Htr (1)", 
-                     "EL1 Sys1 (PSZ) (G.SSW6)", "EM1" )
+                     "DHW Plant 1 Res Wtr Htr (1)", "Thermal Zone 63", 
+                     "EM1" )
    ..
 
 MainWiz   "Gypsy"  
