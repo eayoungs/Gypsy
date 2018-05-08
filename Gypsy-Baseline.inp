@@ -3221,13 +3221,13 @@ SET-DEFAULT FOR WINDOW
    LOCATION         = SPACE-V5
    ..
 "Interior Wall 224" = INTERIOR-WALL   
-   NEXT-TO          = "EL1 Core Spc (G.C9)"
+   NEXT-TO          = "EL1 Core Spc (G.C8)"
    CONSTRUCTION     = "EL1 IWall Construction"
    WIDTH            = 14
    LOCATION         = SPACE-V4
    ..
 "Interior Wall 225" = INTERIOR-WALL   
-   NEXT-TO          = "EL1 Core Spc (G.C9)"
+   NEXT-TO          = "EL1 North Perim Spc (G.N7)"
    CONSTRUCTION     = "EL1 IWall Construction"
    X                = -20
    WIDTH            = 33.5
