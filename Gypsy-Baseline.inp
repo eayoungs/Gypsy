@@ -1661,6 +1661,18 @@ $ ---------------------------------------------------------
    V7               = ( 28, 9.5 )
    V8               = ( -0, 9.5 )
    ..
+"Polygon 109" = POLYGON         
+   V1               = ( 9.5, 0 )
+   V2               = ( 22.5, -0 )
+   V3               = ( 22.5, 28 )
+   V4               = ( 9.5, 28 )
+   ..
+"Polygon 110" = POLYGON         
+   V1               = ( 9.5, 0 )
+   V2               = ( 22.5, -0 )
+   V3               = ( 22.5, 28 )
+   V4               = ( 9.5, 28 )
+   ..
 
 
 $ ---------------------------------------------------------
@@ -3090,7 +3102,7 @@ SET-DEFAULT FOR WINDOW
    ..
 "EL1 WNW Perim Spc (G.WNW11)" = SPACE           
    SHAPE            = POLYGON
-   ZONE-TYPE        = CONDITIONED
+   ZONE-TYPE        = UNCONDITIONED
    LIGHTING-SCHEDUL = ( "EStarMFHR_Non-Apt_LTG-Ann" )
    INF-SCHEDULE     = "ZG0-S1 (PSZ) P-Inf Sch"
    INF-METHOD       = AIR-CHANGE
@@ -4344,7 +4356,7 @@ SET-DEFAULT FOR WINDOW
    Y                = 5
    AZIMUTH          = -90
    SHAPE            = POLYGON
-   ZONE-TYPE        = CONDITIONED
+   ZONE-TYPE        = UNCONDITIONED
    LIGHTING-SCHEDUL = ( "EStarMFHR_Non-Apt_LTG-Ann" )
    INF-SCHEDULE     = "ZG0-S1 (PSZ) C-Inf Sch"
    INF-METHOD       = AIR-CHANGE
@@ -4361,16 +4373,19 @@ SET-DEFAULT FOR WINDOW
 "Interior Wall 226" = INTERIOR-WALL   
    NEXT-TO          = "EL2 East Perim Spc (G.E1)"
    CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
    LOCATION         = SPACE-V2
    ..
 "Interior Wall 227" = INTERIOR-WALL   
    NEXT-TO          = "EL2 Core Spc (G.C5)"
    CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
    LOCATION         = SPACE-V3
    ..
 "Interior Wall 228" = INTERIOR-WALL   
    NEXT-TO          = "EL2 West Perim Spc (G.W9)"
    CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
    LOCATION         = SPACE-V1
    ..
 "EL2 Mid Flr" = FLOOR           
@@ -4617,7 +4632,6 @@ SET-DEFAULT FOR WINDOW
    Y                = 5
    AZIMUTH          = -90
    SHAPE            = POLYGON
-   ZONE-TYPE        = CONDITIONED
    LIGHTING-SCHEDUL = ( "EStarMFHR_Non-Apt_LTG-Ann" )
    INF-SCHEDULE     = "ZG0-S1 (PSZ) C-Inf Sch"
    INF-METHOD       = AIR-CHANGE
