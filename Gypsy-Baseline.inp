@@ -5445,6 +5445,42 @@ SET-DEFAULT FOR WINDOW
    CONSTRUCTION     = "EL1 Ceilg Construction"
    LOCATION         = TOP
    ..
+"Space 70" = SPACE           
+   X                = -17
+   Y                = 5
+   AZIMUTH          = -90
+   SHAPE            = POLYGON
+   ZONE-TYPE        = UNCONDITIONED
+   INF-SCHEDULE     = "ZG0-S1 (PSZ) C-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.001
+   LIGHTING-W/AREA  = ( 0.66 )
+   POLYGON          = "Polygon 110"
+   C-SCHEDULE-TYPE  = 3
+   C-SUB-AREA       = ( 941.02 )
+   C-OCC-TYPE       = ( 22 )
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-HTG-SYS-CLASS  = 2
+   ..
+"Interior Wall 232" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 East Perim Spc (M.E18)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V2
+   ..
+"Interior Wall 233" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 Core Spc (M.C22)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V3
+   ..
+"Interior Wall 234" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 West Perim Spc (M.W26)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V1
+   ..
 "EL2 Top Flr" = FLOOR           
    Z                = 37.57
    AZIMUTH          = 360
@@ -6936,6 +6972,12 @@ SET-DEFAULT FOR ZONE
    TYPE             = UNCONDITIONED
    SIZING-OPTION    = ADJUST-LOADS
    SPACE            = "Elevator / Comm"
+   C-COMPLIANCE-DHW = "Res Compliance DHW"
+   ..
+"Thermal Zone 65" = ZONE            
+   TYPE             = UNCONDITIONED
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "Space 70"
    C-COMPLIANCE-DHW = "Res Compliance DHW"
    ..
 "EL2 Sys1 (PSZ) (G.NNW6)" = SYSTEM          
