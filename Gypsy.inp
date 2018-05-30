@@ -177,6 +177,28 @@ $ ---------------------------------------------------------
 "MinWool Batt R11 (IN02)" = MATERIAL        
    LIBRARY-ENTRY "MinWool Batt R11 (IN02)"
    ..
+"Material 32" = MATERIAL        
+   TYPE             = PROPERTIES
+   THICKNESS        = 0.0417
+   CONDUCTIVITY     = 0.0926
+   DENSITY          = 50
+   SPECIFIC-HEAT    = 0.2
+   ..
+"Material 33" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 0.91
+   ..
+"Material 34" = MATERIAL        
+   TYPE             = PROPERTIES
+   THICKNESS        = 0.0417
+   CONDUCTIVITY     = 0.0926
+   DENSITY          = 50
+   SPECIFIC-HEAT    = 0.2
+   ..
+"Material 35" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 0.91
+   ..
 
 "90.1 2007 BL W Z4-8" = LAYERS          
    MATERIAL         = ( "90.1 2007 Stucco", "90.1 2007 Gyp Board", 
@@ -227,6 +249,12 @@ $ ---------------------------------------------------------
 "Prop_Roof_Deck-LYR" = LAYERS          
    MATERIAL         = ( "Blt-Up Roof 3/8in (BR01)", "Plywd 5/8in (PW04)", 
          "MinWool Batt R11 (IN02)", "GypBd 5/8in (GP02)" )
+   ..
+"Layers 13" = LAYERS          
+   MATERIAL         = ( "Material 32", "Material 33", "GypBd 1/2in (GP01)" )
+   ..
+"Layers 14" = LAYERS          
+   MATERIAL         = ( "Material 34", "Material 35", "GypBd 1/2in (GP01)" )
    ..
 
 "90.1 2007 BL Wall Z4-8" = CONSTRUCTION    
@@ -292,6 +320,14 @@ $ ---------------------------------------------------------
    ABSORPTANCE      = 0.6
    ROUGHNESS        = 1
    LAYERS           = "Prop_Roof_Deck-LYR"
+   ..
+"Construction 16" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "Layers 13"
+   ..
+"Construction 17" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "Layers 14"
    ..
 
 
@@ -510,6 +546,26 @@ $ ---------------------------------------------------------
    VALUES           = ( 0.1, &D, &D, &D, &D, 0.25, 0.35, 1, 0.1, &D, &D, &D, 
          &D, &D, &D, 0.25, 0.35, 1, &D, 0.35, 0.25, 0.1 )
    ..
+"Day Schedule 37" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 0.0662252, &D, &D, &D, &D, &D, 0.331126, 0.596027, &D, 
+         0.463576, &D, &D, 0.331126, &D, &D, &D, &D, 0.463576, 0.927152, 
+         0.794702, 0.0662252 )
+   ..
+"Day Schedule 38" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 1 )
+   ..
+"Day Schedule 39" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 0.0662252, &D, &D, &D, &D, &D, 0.331126, 0.596027, &D, 
+         0.463576, &D, &D, 0.331126, &D, &D, &D, &D, 0.463576, 0.927152, 
+         0.794702, 0.0662252 )
+   ..
+"Day Schedule 40" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 1 )
+   ..
 
 $ ---------------------------------------------------------
 $              Week Schedules
@@ -605,6 +661,22 @@ $ ---------------------------------------------------------
    TYPE             = MULTIPLIER
    DAY-SCHEDULES    = ( "Day Schedule 36" )
    ..
+"Week Schedule 24" = WEEK-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   DAY-SCHEDULES    = ( "Day Schedule 37" )
+   ..
+"Week Schedule 25" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "Day Schedule 38" )
+   ..
+"Week Schedule 26" = WEEK-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   DAY-SCHEDULES    = ( "Day Schedule 39" )
+   ..
+"Week Schedule 27" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "Day Schedule 40" )
+   ..
 
 $ ---------------------------------------------------------
 $              Annual Schedules
@@ -699,6 +771,30 @@ $ ---------------------------------------------------------
    MONTH            = ( 12 )
    DAY              = ( 31 )
    WEEK-SCHEDULES   = ( "Week Schedule 23" )
+   ..
+"Annual Schedule 18" = SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   MONTH            = ( 12 )
+   DAY              = ( 31 )
+   WEEK-SCHEDULES   = ( "Week Schedule 24" )
+   ..
+"Annual Schedule 19" = SCHEDULE-PD
+   TYPE             = FRACTION
+   MONTH            = ( 12 )
+   DAY              = ( 31 )
+   WEEK-SCHEDULES   = ( "Week Schedule 25" )
+   ..
+"Annual Schedule 20" = SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   MONTH            = ( 12 )
+   DAY              = ( 31 )
+   WEEK-SCHEDULES   = ( "Week Schedule 26" )
+   ..
+"Annual Schedule 21" = SCHEDULE-PD
+   TYPE             = FRACTION
+   MONTH            = ( 12 )
+   DAY              = ( 31 )
+   WEEK-SCHEDULES   = ( "Week Schedule 27" )
    ..
 
 
@@ -1651,6 +1747,18 @@ $ ---------------------------------------------------------
    V6               = ( 28, 31 )
    V7               = ( 28, 9.5 )
    V8               = ( -0, 9.5 )
+   ..
+"Polygon 109" = POLYGON         
+   V1               = ( 9.5, 0 )
+   V2               = ( 22.5, -0 )
+   V3               = ( 22.5, 28 )
+   V4               = ( 9.5, 28 )
+   ..
+"Polygon 110" = POLYGON         
+   V1               = ( 9.5, 0 )
+   V2               = ( 22.5, -0 )
+   V3               = ( 22.5, 28 )
+   V4               = ( 9.5, 28 )
    ..
 
 
@@ -3081,7 +3189,7 @@ SET-DEFAULT FOR WINDOW
    ..
 "EL1 WNW Perim Spc (G.WNW11)" = SPACE           
    SHAPE            = POLYGON
-   ZONE-TYPE        = CONDITIONED
+   ZONE-TYPE        = UNCONDITIONED
    LIGHTING-SCHEDUL = ( "EStarMFHR_Non-Apt_LTG-Ann" )
    INF-SCHEDULE     = "ZG0-S1 (PSZ) P-Inf Sch"
    INF-METHOD       = AIR-CHANGE
@@ -4335,7 +4443,7 @@ SET-DEFAULT FOR WINDOW
    Y                = 5
    AZIMUTH          = -90
    SHAPE            = POLYGON
-   ZONE-TYPE        = CONDITIONED
+   ZONE-TYPE        = UNCONDITIONED
    LIGHTING-SCHEDUL = ( "EStarMFHR_Non-Apt_LTG-Ann" )
    INF-SCHEDULE     = "ZG0-S1 (PSZ) C-Inf Sch"
    INF-METHOD       = AIR-CHANGE
@@ -4352,16 +4460,19 @@ SET-DEFAULT FOR WINDOW
 "Interior Wall 226" = INTERIOR-WALL   
    NEXT-TO          = "EL2 East Perim Spc (G.E1)"
    CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
    LOCATION         = SPACE-V2
    ..
 "Interior Wall 227" = INTERIOR-WALL   
    NEXT-TO          = "EL2 Core Spc (G.C5)"
    CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
    LOCATION         = SPACE-V3
    ..
 "Interior Wall 228" = INTERIOR-WALL   
    NEXT-TO          = "EL2 West Perim Spc (G.W9)"
    CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
    LOCATION         = SPACE-V1
    ..
 "EL2 Mid Flr" = FLOOR           
@@ -4608,7 +4719,6 @@ SET-DEFAULT FOR WINDOW
    Y                = 5
    AZIMUTH          = -90
    SHAPE            = POLYGON
-   ZONE-TYPE        = CONDITIONED
    LIGHTING-SCHEDUL = ( "EStarMFHR_Non-Apt_LTG-Ann" )
    INF-SCHEDULE     = "ZG0-S1 (PSZ) C-Inf Sch"
    INF-METHOD       = AIR-CHANGE
@@ -5421,6 +5531,43 @@ SET-DEFAULT FOR WINDOW
    NEXT-TO          = "EL2 Core Spc (T.C51)"
    CONSTRUCTION     = "EL1 Ceilg Construction"
    LOCATION         = TOP
+   ..
+"Space 70" = SPACE           
+   X                = -17
+   Y                = 5
+   AZIMUTH          = -90
+   SHAPE            = POLYGON
+   ZONE-TYPE        = UNCONDITIONED
+   LIGHTING-SCHEDUL = ( "Annual Schedule 20" )
+   INF-SCHEDULE     = "Annual Schedule 21"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.001
+   LIGHTING-W/AREA  = ( 0.66 )
+   POLYGON          = "Polygon 110"
+   C-SCHEDULE-TYPE  = 3
+   C-SUB-AREA       = ( 941.02 )
+   C-OCC-TYPE       = ( 22 )
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-HTG-SYS-CLASS  = 2
+   ..
+"Interior Wall 232" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 East Perim Spc (M.E18)"
+   CONSTRUCTION     = "Construction 17"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V2
+   ..
+"Interior Wall 233" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 Core Spc (M.C22)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V3
+   ..
+"Interior Wall 234" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 West Perim Spc (M.W26)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V1
    ..
 "EL2 Top Flr" = FLOOR           
    Z                = 37.57
@@ -6479,6 +6626,43 @@ SET-DEFAULT FOR WINDOW
    NEXT-TO          = "EL2 Core Spc (T.C50)"
    CONSTRUCTION     = "EL1 IWall Construction"
    LOCATION         = SPACE-V3
+   ..
+"Space 66" = SPACE           
+   X                = -17
+   Y                = 5
+   AZIMUTH          = -90
+   SHAPE            = POLYGON
+   ZONE-TYPE        = UNCONDITIONED
+   LIGHTING-SCHEDUL = ( "Annual Schedule 18" )
+   INF-SCHEDULE     = "Annual Schedule 19"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.001
+   LIGHTING-W/AREA  = ( 0.66 )
+   POLYGON          = "Polygon 109"
+   C-SCHEDULE-TYPE  = 3
+   C-SUB-AREA       = ( 941.02 )
+   C-OCC-TYPE       = ( 22 )
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-HTG-SYS-CLASS  = 2
+   ..
+"Interior Wall 229" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 East Perim Spc (T.E35)"
+   CONSTRUCTION     = "Construction 16"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V2
+   ..
+"Interior Wall 230" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 Core Spc (T.C39)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V3
+   ..
+"Interior Wall 231" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 West Perim Spc (T.W43)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V1
    ..
 
 
@@ -7798,6 +7982,18 @@ SET-DEFAULT FOR ZONE
    TYPE             = UNCONDITIONED
    SIZING-OPTION    = ADJUST-LOADS
    SPACE            = "Elevator / Comm"
+   C-COMPLIANCE-DHW = "Res Compliance DHW"
+   ..
+"Thermal Zone 65" = ZONE            
+   TYPE             = UNCONDITIONED
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "Space 70"
+   C-COMPLIANCE-DHW = "Res Compliance DHW"
+   ..
+"Thermal Zone 66" = ZONE            
+   TYPE             = UNCONDITIONED
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "Space 66"
    C-COMPLIANCE-DHW = "Res Compliance DHW"
    ..
 "RTU-2" = SYSTEM          
