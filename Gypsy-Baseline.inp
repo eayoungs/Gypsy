@@ -4357,7 +4357,6 @@ SET-DEFAULT FOR WINDOW
    AZIMUTH          = -90
    SHAPE            = POLYGON
    ZONE-TYPE        = UNCONDITIONED
-   LIGHTING-SCHEDUL = ( "EStarMFHR_Non-Apt_LTG-Ann" )
    INF-SCHEDULE     = "ZG0-S1 (PSZ) C-Inf Sch"
    INF-METHOD       = AIR-CHANGE
    INF-FLOW/AREA    = 0.001
@@ -6539,6 +6538,42 @@ SET-DEFAULT FOR WINDOW
    CONSTRUCTION     = "EL1 IWall Construction"
    LOCATION         = SPACE-V3
    ..
+"Space 66" = SPACE           
+   X                = -17
+   Y                = 5
+   AZIMUTH          = -90
+   SHAPE            = POLYGON
+   ZONE-TYPE        = UNCONDITIONED
+   INF-SCHEDULE     = "Annual Schedule 19"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.001
+   LIGHTING-W/AREA  = ( 0.66 )
+   POLYGON          = "Polygon 109"
+   C-SCHEDULE-TYPE  = 3
+   C-SUB-AREA       = ( 941.02 )
+   C-OCC-TYPE       = ( 22 )
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-HTG-SYS-CLASS  = 2
+   ..
+"Interior Wall 229" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 East Perim Spc (T.E35)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V2
+   ..
+"Interior Wall 230" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 Core Spc (T.C39)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V3
+   ..
+"Interior Wall 231" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 West Perim Spc (T.W43)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V1
+   ..
 
 
 $ *********************************************************
@@ -6978,6 +7013,12 @@ SET-DEFAULT FOR ZONE
    TYPE             = UNCONDITIONED
    SIZING-OPTION    = ADJUST-LOADS
    SPACE            = "Space 70"
+   C-COMPLIANCE-DHW = "Res Compliance DHW"
+   ..
+"Thermal Zone 66" = ZONE            
+   TYPE             = UNCONDITIONED
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "Space 66"
    C-COMPLIANCE-DHW = "Res Compliance DHW"
    ..
 "EL2 Sys1 (PSZ) (G.NNW6)" = SYSTEM          
