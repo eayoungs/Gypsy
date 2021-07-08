@@ -4,18 +4,18 @@ Proj   "Gypsy"
    ProductCode = "eQUEST"
    WeatherFile = "TMY2\PORTLAOR.bin"
    CreateDate = 1446512138
-   ModDate = 1473972036
+   ModDate = 1525824156
    RunDate = 1466719701
    LibraryFile = "eQ_Lib.dat"
    ActiveMode = 0
-   InputModule = 4
+   InputModule = 1
    ComplianceRules = "LEED-NC - v3.0 (LEED.bin)"
    UseCameraData = 1
-   ClippingRange = ( 118.427, 511.437 )
+   ClippingRange = ( 0.828147, 828.147 )
    FocalPoint = ( -1.22502, -6.70075, 44.5293 )
-   Position = ( -87.3067, -149.963, 264.205 )
+   Position = ( 16.7414, 198.647, -54.8312 )
    ViewUpVector = ( 0, 0, 1 )
-   ViewAngle = 33.5907
+   ViewAngle = 33.1099
    InterfaceMode = 1
    AllowWizard = 1
    NotProjFile = "Gypsy"
@@ -24,13 +24,12 @@ Proj   "Gypsy"
    PreviousName = "Gypsy-BaseTest"
    DetailedModelEdits = 1
    ProjTreeType = ( 0, 1, 1, 1, 1, 1 )
-   ProjTreeID = ( 10000, 10120000, 10080000, 10670000, 10550006, 
+   ProjTreeID = ( 10000, 10080016, 10080000, 10670000, 10550063, 
                   10750000 )
-   ProjTreeLabel = ( "Project:  'Gypsy-BaseTest'", 
-                     "EL1 West Win (G.NNE1.E1.W1)", 
+   ProjTreeLabel = ( "Project:  'Gypsy'", "EL2 Core Spc (G.C5)", 
                      "Commercial_GrnFlr_1-SPC", 
-                     "DHW Plant 1 Res Wtr Htr (1)", 
-                     "EL1 SSW Perim Zn (G.SSW6)", "EM1" )
+                     "DHW Plant 1 Res Wtr Htr (1)", "Thermal Zone 63", 
+                     "EM1" )
    ..
 
 MainWiz   "Gypsy"  
@@ -1255,9 +1254,9 @@ CustomZone   "Custom Zone 28"
 DiagData   "Bldg Envelope & Loads 1 Diag Data"  
    PolyWndShowGrid = 1
    PolyWndGridRes = 3
-   PolyWndLwrLeftX = -165
-   PolyWndLwrLeftY = -93
-   PolyWndWidth = 327.75
+   PolyWndLwrLeftX = -169
+   PolyWndLwrLeftY = -89
+   PolyWndWidth = 333.25
    PolyWndSnapOrder[2] = 1
    PolyWndSnapOrder[3] = 3
    ShowCADLayer[1] = 1
@@ -1576,8 +1575,6 @@ CADFile   "1456_Xplan1 - DXF"
    ..
 
 CADFile   "1456_Xplan1 - DXF 2"  
-   FileName = "Drawings\eQ\1456_Xplan1.dxf"
-   FilePathOffset = 2
    ScaleUnits = 0
    ScaleValue = 1
    OriginX = 1126.51
@@ -1586,8 +1583,6 @@ CADFile   "1456_Xplan1 - DXF 2"
    ..
 
 CADFile   "1456_Xplan2 - DXF"  
-   FileName = "Drawings\eQ\1456_Xplan2.dxf"
-   FilePathOffset = 2
    ScaleUnits = 0
    ScaleValue = 1
    OriginX = 1116.81

@@ -174,6 +174,31 @@ $ ---------------------------------------------------------
 "Com Brick 4in (BK01)" = MATERIAL        
    LIBRARY-ENTRY "Com Brick 4in (BK01)"
    ..
+"MinWool Batt R11 (IN02)" = MATERIAL        
+   LIBRARY-ENTRY "MinWool Batt R11 (IN02)"
+   ..
+"Material 32" = MATERIAL        
+   TYPE             = PROPERTIES
+   THICKNESS        = 0.0417
+   CONDUCTIVITY     = 0.0926
+   DENSITY          = 50
+   SPECIFIC-HEAT    = 0.2
+   ..
+"Material 33" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 0.91
+   ..
+"Material 34" = MATERIAL        
+   TYPE             = PROPERTIES
+   THICKNESS        = 0.0417
+   CONDUCTIVITY     = 0.0926
+   DENSITY          = 50
+   SPECIFIC-HEAT    = 0.2
+   ..
+"Material 35" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 0.91
+   ..
 
 "90.1 2007 BL W Z4-8" = LAYERS          
    MATERIAL         = ( "90.1 2007 Stucco", "90.1 2007 Gyp Board", 
@@ -220,6 +245,16 @@ $ ---------------------------------------------------------
    MATERIAL         = ( "Com Brick 4in (BK01)", "Air Lay <4in Vert (AL21)", 
          "MinBd 2in R-6.9 (IN23)", "Plastic Film Seal (BP03)", 
          "Plywd 1/2in (PW03)", "MinWool Batt R21", "GypBd 5/8in (GP02)" )
+   ..
+"Prop_Roof_Deck-LYR" = LAYERS          
+   MATERIAL         = ( "Blt-Up Roof 3/8in (BR01)", "Plywd 5/8in (PW04)", 
+         "MinWool Batt R11 (IN02)", "GypBd 5/8in (GP02)" )
+   ..
+"Layers 13" = LAYERS          
+   MATERIAL         = ( "Material 32", "Material 33", "GypBd 1/2in (GP01)" )
+   ..
+"Layers 14" = LAYERS          
+   MATERIAL         = ( "Material 34", "Material 35", "GypBd 1/2in (GP01)" )
    ..
 
 "90.1 2007 BL Wall Z4-8" = CONSTRUCTION    
@@ -279,6 +314,20 @@ $ ---------------------------------------------------------
 "GrndFlr_ExtWall-CNS" = CONSTRUCTION    
    TYPE             = LAYERS
    LAYERS           = "GrndFlr_ExtWall-LYR"
+   ..
+"Prop_Roof_Deck-CNS" = CONSTRUCTION    
+   TYPE             = LAYERS
+   ABSORPTANCE      = 0.6
+   ROUGHNESS        = 1
+   LAYERS           = "Prop_Roof_Deck-LYR"
+   ..
+"Construction 16" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "Layers 13"
+   ..
+"Construction 17" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "Layers 14"
    ..
 
 
@@ -497,6 +546,26 @@ $ ---------------------------------------------------------
    VALUES           = ( 0.1, &D, &D, &D, &D, 0.25, 0.35, 1, 0.1, &D, &D, &D, 
          &D, &D, &D, 0.25, 0.35, 1, &D, 0.35, 0.25, 0.1 )
    ..
+"Day Schedule 37" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 0.0662252, &D, &D, &D, &D, &D, 0.331126, 0.596027, &D, 
+         0.463576, &D, &D, 0.331126, &D, &D, &D, &D, 0.463576, 0.927152, 
+         0.794702, 0.0662252 )
+   ..
+"Day Schedule 38" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 1 )
+   ..
+"Day Schedule 39" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 0.0662252, &D, &D, &D, &D, &D, 0.331126, 0.596027, &D, 
+         0.463576, &D, &D, 0.331126, &D, &D, &D, &D, 0.463576, 0.927152, 
+         0.794702, 0.0662252 )
+   ..
+"Day Schedule 40" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 1 )
+   ..
 
 $ ---------------------------------------------------------
 $              Week Schedules
@@ -592,6 +661,22 @@ $ ---------------------------------------------------------
    TYPE             = MULTIPLIER
    DAY-SCHEDULES    = ( "Day Schedule 36" )
    ..
+"Week Schedule 24" = WEEK-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   DAY-SCHEDULES    = ( "Day Schedule 37" )
+   ..
+"Week Schedule 25" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "Day Schedule 38" )
+   ..
+"Week Schedule 26" = WEEK-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   DAY-SCHEDULES    = ( "Day Schedule 39" )
+   ..
+"Week Schedule 27" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "Day Schedule 40" )
+   ..
 
 $ ---------------------------------------------------------
 $              Annual Schedules
@@ -686,6 +771,30 @@ $ ---------------------------------------------------------
    MONTH            = ( 12 )
    DAY              = ( 31 )
    WEEK-SCHEDULES   = ( "Week Schedule 23" )
+   ..
+"Annual Schedule 18" = SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   MONTH            = ( 12 )
+   DAY              = ( 31 )
+   WEEK-SCHEDULES   = ( "Week Schedule 24" )
+   ..
+"Annual Schedule 19" = SCHEDULE-PD
+   TYPE             = FRACTION
+   MONTH            = ( 12 )
+   DAY              = ( 31 )
+   WEEK-SCHEDULES   = ( "Week Schedule 25" )
+   ..
+"Annual Schedule 20" = SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   MONTH            = ( 12 )
+   DAY              = ( 31 )
+   WEEK-SCHEDULES   = ( "Week Schedule 26" )
+   ..
+"Annual Schedule 21" = SCHEDULE-PD
+   TYPE             = FRACTION
+   MONTH            = ( 12 )
+   DAY              = ( 31 )
+   WEEK-SCHEDULES   = ( "Week Schedule 27" )
    ..
 
 
@@ -863,10 +972,10 @@ $ ---------------------------------------------------------
    ..
 "EL1 Space Polygon 11" = POLYGON         
    V1               = ( 0, 0 )
-   V2               = ( 47, 0 )
+   V2               = ( 47, 3.8147e-006 )
    V3               = ( 47, 5.1 )
-   V4               = ( 47, 25 )
-   V5               = ( 0, 25 )
+   V4               = ( 47, 40 )
+   V5               = ( 0, 40 )
    ..
 "EL2 Floor Polygon" = POLYGON         
    V1               = ( -83, 56 )
@@ -920,8 +1029,8 @@ $ ---------------------------------------------------------
    ..
 "EL2 Space Polygon 5" = POLYGON         
    V1               = ( 0, 0 )
-   V2               = ( 22.5, -0 )
-   V3               = ( 22.5, 28 )
+   V2               = ( 9.5, -0 )
+   V3               = ( 9.5, 28 )
    V4               = ( 31, 28 )
    V5               = ( 31, 35.95 )
    V6               = ( -8, 36 )
@@ -1265,12 +1374,391 @@ $ ---------------------------------------------------------
    V6               = ( 0, 7.85 )
    ..
 "Polygon 59" = POLYGON         
+   V1               = ( 27, 88.5 )
+   V2               = ( 0, 88.5 )
+   V3               = ( 0, 66 )
+   V4               = ( 27, 66 )
+   ..
+"EL1 Space Polygon 7b" = POLYGON         
    V1               = ( 0, 0 )
-   V2               = ( 4.6, 0 )
-   V3               = ( 88.5, -0 )
-   V4               = ( 88.5, 24 )
-   V5               = ( 88.5, 27 )
-   V6               = ( 0, 27 )
+   V2               = ( 3, 0 )
+   V3               = ( 3, 14 )
+   V4               = ( -54, 14 )
+   V5               = ( -54, 0 )
+   ..
+"EL1 Space Polygon 7b - SMirro" = POLYGON         
+   V1               = ( 0, 3 )
+   V2               = ( 14, 3 )
+   V3               = ( 14, -20.5 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 23, -7 )
+   V6               = ( 0, 0 )
+   ..
+"Mirror Poly 1" = POLYGON         
+   V1               = ( 0, 3 )
+   V2               = ( 14, 3 )
+   V3               = ( 14, -20.5 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 23, 7 )
+   V6               = ( 0, 0 )
+   ..
+"Mirror Poly 2" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 0, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, 3 )
+   V7               = ( 0, 3 )
+   ..
+"Mirror Poly 3" = POLYGON         
+   V1               = ( 0, 3 )
+   V2               = ( 14, 3 )
+   V3               = ( 14, -20.5 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 23, -7 )
+   V6               = ( 64, -7 )
+   V7               = ( 0, 0 )
+   ..
+"Mirror Poly 4" = POLYGON         
+   V1               = ( 0, 3 )
+   V2               = ( 14, 3 )
+   V3               = ( 14, -20.5 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -7 )
+   V6               = ( 64, 3 )
+   V7               = ( 0, 0 )
+   ..
+"Mirror Poly 5" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 14, 0 )
+   V3               = ( 14, 3 )
+   V4               = ( 0, 3 )
+   ..
+"Mirror Poly 6" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 14, 0 )
+   V3               = ( 14, 64 )
+   V4               = ( 0, 64 )
+   ..
+"Mirror Poly 7" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 14, 0 )
+   V3               = ( 14, -54 )
+   V4               = ( 0, 64 )
+   ..
+"Mirror Poly 8" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( -54, 0 )
+   V3               = ( 14, -54 )
+   V4               = ( 0, 64 )
+   ..
+"Mirror Poly 9" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( -7, 0 )
+   V3               = ( 14, -54 )
+   V4               = ( 0, 64 )
+   ..
+"Mirror Poly 10" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( -7, 0 )
+   V3               = ( 14, -54 )
+   V4               = ( 14, 3 )
+   ..
+"Mirror Poly 11" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( -7, 0 )
+   V3               = ( 14, -20 )
+   V4               = ( 14, 3 )
+   ..
+"Mirror Poly 12" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( -7, 0 )
+   V3               = ( 14, -20.5 )
+   V4               = ( 14, 3 )
+   ..
+"Mirror Poly 13" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( -7, -20.5 )
+   V3               = ( 14, -20.5 )
+   V4               = ( 14, 3 )
+   ..
+"Mirror Poly 14" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 0, -20.5 )
+   V3               = ( 14, -20.5 )
+   V4               = ( 14, 3 )
+   ..
+"Mirror Poly 15" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 0, -20.5 )
+   V3               = ( 14, -20.5 )
+   V4               = ( 0, 3 )
+   ..
+"Mirror Poly 16" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 0, -20.5 )
+   V3               = ( 14, 3 )
+   V4               = ( 0, 3 )
+   ..
+"Mirror Poly 17" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 0, -54 )
+   V3               = ( 14, 3 )
+   V4               = ( 0, 3 )
+   ..
+"Mirror Poly 18" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 14, -54 )
+   V3               = ( 14, 3 )
+   V4               = ( 0, 3 )
+   ..
+"Mirror Poly 19" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 0, -54 )
+   V3               = ( 14, -54 )
+   V4               = ( 14, 3 )
+   V5               = ( 0, 3 )
+   ..
+"Mirror Poly 20" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 64, -54 )
+   V3               = ( 64, -7 )
+   V4               = ( 23, -7 )
+   V5               = ( 23, -20.5 )
+   V6               = ( 14, -20.5 )
+   V7               = ( 14, 3 )
+   V8               = ( 0, 3 )
+   ..
+"Mirror Poly 21" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 3, -54 )
+   V3               = ( 64, -54 )
+   V4               = ( 64, -7 )
+   V5               = ( 23, -7 )
+   V6               = ( 23, -20.5 )
+   V7               = ( 14, -20.5 )
+   V8               = ( 14, 3 )
+   V9               = ( 0, 3 )
+   ..
+"EL1 Space Polygon 7c - SMirro" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 22" = POLYGON         
+   V1               = ( -54, 49 )
+   V2               = ( -54, 14 )
+   V3               = ( -20.5, 14 )
+   V4               = ( -20.5, 23 )
+   V5               = ( -7, 23 )
+   V6               = ( -7, 49 )
+   ..
+"Mirror Poly 23" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 41, 2 )
+   V3               = ( 41, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Mirror Poly 24" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 41, 2 )
+   V3               = ( 41, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Mirror Poly 25" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 41, 2 )
+   V3               = ( 47, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Mirror Poly 26" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 47, 2 )
+   V3               = ( 47, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Mirror Poly 27" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 47, 0 )
+   V3               = ( 47, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Mirror Poly 22 - SMirro" = POLYGON         
+   V1               = ( 64, -43 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -43 )
+   ..
+"Mirror Poly 28" = POLYGON         
+   V1               = ( 64, -43 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 29" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -43 )
+   ..
+"Mirror Poly 30" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 0, -54 )
+   ..
+"Mirror Poly 31" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 0, -20.5 )
+   V6               = ( 0, -54 )
+   ..
+"Mirror Poly 32" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 0, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 33" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 8, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 34" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -5.5 )
+   V5               = ( 14, -5.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 35" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -18 )
+   V3               = ( 23, -18 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 36" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 64, -18 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 37" = POLYGON         
+   V1               = ( 64, -54 )
+   V2               = ( 49, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 38" = POLYGON         
+   V1               = ( 49, -54 )
+   V2               = ( 49, -7 )
+   V3               = ( 23, -7 )
+   V4               = ( 23, -20.5 )
+   V5               = ( 14, -20.5 )
+   V6               = ( 14, -54 )
+   ..
+"Mirror Poly 39" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 47, 0 )
+   V3               = ( 40, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Mirror Poly 40" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 40, 0 )
+   V3               = ( 40, 47 )
+   V4               = ( 5.1, 47 )
+   V5               = ( 3.8147e-006, 47 )
+   ..
+"Elev / Comm Space Polygon" = POLYGON         
+   V1               = ( 9.5, 0 )
+   V2               = ( 22.5, -0 )
+   V3               = ( 22.5, 28 )
+   V4               = ( 9.5, 28 )
+   ..
+"Mirror Poly 41" = POLYGON         
+   V1               = ( 0, 13 )
+   V2               = ( 28, 0 )
+   V3               = ( 28, -8 )
+   V4               = ( 36, -8 )
+   V5               = ( 35.95, 31 )
+   V6               = ( 28, 31 )
+   V7               = ( 28, 22.5 )
+   V8               = ( -0, 22.5 )
+   ..
+"Mirror Poly 42" = POLYGON         
+   V1               = ( 13, 0 )
+   V2               = ( 28, 0 )
+   V3               = ( 28, -8 )
+   V4               = ( 36, -8 )
+   V5               = ( 35.95, 31 )
+   V6               = ( 28, 31 )
+   V7               = ( 28, 22.5 )
+   V8               = ( -0, 22.5 )
+   ..
+"Mirror Poly 43" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 28, 0 )
+   V3               = ( 28, -8 )
+   V4               = ( 36, -8 )
+   V5               = ( 35.95, 31 )
+   V6               = ( 28, 31 )
+   V7               = ( 28, 22.5 )
+   V8               = ( -0, 9.5 )
+   ..
+"Mirror Poly 44" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 28, 0 )
+   V3               = ( 28, -8 )
+   V4               = ( 36, -8 )
+   V5               = ( 35.95, 31 )
+   V6               = ( 28, 31 )
+   V7               = ( 28, 9.5 )
+   V8               = ( -0, 9.5 )
+   ..
+"Polygon 109" = POLYGON         
+   V1               = ( 9.5, 0 )
+   V2               = ( 22.5, -0 )
+   V3               = ( 22.5, 28 )
+   V4               = ( 9.5, 28 )
+   ..
+"Polygon 110" = POLYGON         
+   V1               = ( 9.5, 0 )
+   V2               = ( 22.5, -0 )
+   V3               = ( 22.5, 28 )
+   V4               = ( 9.5, 28 )
    ..
 
 
@@ -2431,6 +2919,12 @@ SET-DEFAULT FOR WINDOW
    FRAME-CONDUCT    = 0.353
    SPACER-TYPE      = ALUMINUM
    ..
+"Exterior Wall 205" = EXTERIOR-WALL   
+   CONSTRUCTION     = "90.1 2007 BL Roof Z2-8"
+   LOCATION         = TOP
+   POLYGON          = "Polygon 59"
+   SHADING-SURFACE  = YES
+   ..
 "EL1 North Wall (G.SSW6.I23)" = INTERIOR-WALL   
    NEXT-TO          = "EL1 Core Spc (G.C8)"
    CONSTRUCTION     = "EL1 IWall Construction"
@@ -2447,7 +2941,7 @@ SET-DEFAULT FOR WINDOW
    EQUIPMENT-KW     = ( 1.2542 )
    LIGHTING-W/AREA  = ( 0.66 )
    EQUIPMENT-W/AREA = ( 0 )
-   POLYGON          = "EL1 Space Polygon 7"
+   POLYGON          = "Mirror Poly 22"
    LOCATION         = FLOOR-V45
    C-SCHEDULE-TYPE  = 3
    C-SUB-AREA       = ( 3026.5 )
@@ -2462,66 +2956,6 @@ SET-DEFAULT FOR WINDOW
    CONSTRUCTION     = "EL1 GFlr Construction"
    LOCATION         = BOTTOM
    ..
-"EL1 East Slab (G.N7.S41)" = EXTERIOR-WALL   
-   CONSTRUCTION     = "EL1 GFSHL Construction"
-   HEIGHT           = 0.5
-   LOCATION         = SPACE-V1
-   ..
-"EL1 East Wall (G.N7.E41)" = EXTERIOR-WALL   
-   CONSTRUCTION     = "90.1 2007 BL Wall Z4-8"
-   LOCATION         = SPACE-V1
-   SHADING-SURFACE  = YES
-   ..
-"EL1 East Win (G.N7.E41.W1)" = WINDOW          
-   GLASS-TYPE       = "90.1_NonRes-Simple"
-   FRAME-WIDTH      = 0.125
-   X                = 0.9365
-   Y                = 2.125
-   HEIGHT           = 11.75
-   WIDTH            = 1.127
-   FRAME-CONDUCT    = 0.353
-   SPACER-TYPE      = ALUMINUM
-   ..
-"EL1 North Slab (G.N7.S42)" = EXTERIOR-WALL   
-   CONSTRUCTION     = "EL1 GFSHL Construction"
-   HEIGHT           = 0.5
-   LOCATION         = SPACE-V2
-   ..
-"EL1 North Wall (G.N7.E42)" = EXTERIOR-WALL   
-   CONSTRUCTION     = "90.1 2007 BL Wall Z4-8"
-   LOCATION         = SPACE-V2
-   SHADING-SURFACE  = YES
-   ..
-"EL1 North Win (G.N7.E42.W1)" = WINDOW          
-   GLASS-TYPE       = "90.1_NonRes-Simple"
-   FRAME-WIDTH      = 0.125
-   X                = 3.912
-   Y                = 2.125
-   HEIGHT           = 11.75
-   WIDTH            = 6.176
-   FRAME-CONDUCT    = 0.353
-   SPACER-TYPE      = ALUMINUM
-   ..
-"EL1 West Slab (G.N7.S43)" = EXTERIOR-WALL   
-   CONSTRUCTION     = "EL1 GFSHL Construction"
-   HEIGHT           = 0.5
-   LOCATION         = SPACE-V3
-   ..
-"EL1 West Wall (G.N7.E43)" = EXTERIOR-WALL   
-   CONSTRUCTION     = "90.1 2007 BL Wall Z4-8"
-   LOCATION         = SPACE-V3
-   SHADING-SURFACE  = YES
-   ..
-"EL1 West Win (G.N7.E43.W1)" = WINDOW          
-   GLASS-TYPE       = "90.1_NonRes-Simple"
-   FRAME-WIDTH      = 0.125
-   X                = 7.90937
-   Y                = 2.125
-   HEIGHT           = 11.75
-   WIDTH            = 7.68125
-   FRAME-CONDUCT    = 0.353
-   SPACER-TYPE      = ALUMINUM
-   ..
 "EL1 North Slab (G.N7.S44)" = EXTERIOR-WALL   
    CONSTRUCTION     = "EL1 GFSHL Construction"
    HEIGHT           = 0.5
@@ -2529,7 +2963,7 @@ SET-DEFAULT FOR WINDOW
    ..
 "EL1 North Wall (G.N7.E44)" = EXTERIOR-WALL   
    CONSTRUCTION     = "90.1 2007 BL Wall Z4-8"
-   LOCATION         = SPACE-V4
+   LOCATION         = SPACE-V3
    SHADING-SURFACE  = YES
    ..
 "EL1 North Win (G.N7.E44.W1)" = WINDOW          
@@ -2549,7 +2983,7 @@ SET-DEFAULT FOR WINDOW
    ..
 "EL1 East Wall (G.N7.E45)" = EXTERIOR-WALL   
    CONSTRUCTION     = "90.1 2007 BL Wall Z4-8"
-   LOCATION         = SPACE-V5
+   LOCATION         = SPACE-V4
    SHADING-SURFACE  = YES
    ..
 "EL1 East Win (G.N7.E45.W1)" = WINDOW          
@@ -2565,11 +2999,11 @@ SET-DEFAULT FOR WINDOW
 "EL1 North Slab (G.N7.S46)" = EXTERIOR-WALL   
    CONSTRUCTION     = "EL1 GFSHL Construction"
    HEIGHT           = 0.5
-   LOCATION         = SPACE-V6
+   LOCATION         = SPACE-V5
    ..
 "EL1 North Wall (G.N7.E46)" = EXTERIOR-WALL   
    CONSTRUCTION     = "90.1 2007 BL Wall Z4-8"
-   LOCATION         = SPACE-V6
+   LOCATION         = SPACE-V5
    SHADING-SURFACE  = YES
    ..
 "EL1 North Win (G.N7.E46.W1)" = WINDOW          
@@ -2585,17 +3019,12 @@ SET-DEFAULT FOR WINDOW
 "EL1 West Wall (G.N7.I25)" = INTERIOR-WALL   
    NEXT-TO          = "EL1 WNW Perim Spc (G.WNW11)"
    CONSTRUCTION     = "EL1 IWall Construction"
-   LOCATION         = SPACE-V7
+   LOCATION         = SPACE-V6
    ..
-"EL1 South Wall (G.N7.I26)" = INTERIOR-WALL   
-   NEXT-TO          = "EL1 Core Spc (G.C8)"
+"Interior Wall 223" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 WNW Perim Spc (G.WNW11)"
    CONSTRUCTION     = "EL1 IWall Construction"
-   LOCATION         = SPACE-V8
-   ..
-"EL1 East Wall (G.N7.I27)" = INTERIOR-WALL   
-   NEXT-TO          = "EL1 Core Spc (G.C9)"
-   CONSTRUCTION     = "EL1 IWall Construction"
-   LOCATION         = SPACE-V9
+   LOCATION         = SPACE-V1
    ..
 "EL1 Core Spc (G.C8)" = SPACE           
    SHAPE            = POLYGON
@@ -2760,7 +3189,7 @@ SET-DEFAULT FOR WINDOW
    ..
 "EL1 WNW Perim Spc (G.WNW11)" = SPACE           
    SHAPE            = POLYGON
-   ZONE-TYPE        = CONDITIONED
+   ZONE-TYPE        = UNCONDITIONED
    LIGHTING-SCHEDUL = ( "EStarMFHR_Non-Apt_LTG-Ann" )
    INF-SCHEDULE     = "ZG0-S1 (PSZ) P-Inf Sch"
    INF-METHOD       = AIR-CHANGE
@@ -2844,6 +3273,109 @@ SET-DEFAULT FOR WINDOW
 "EL1 South Wall (G.WNW11.I38)" = INTERIOR-WALL   
    NEXT-TO          = "EL1 Core Spc (G.C8)"
    CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 North Perim Spc (G.N7)b" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = UNCONDITIONED
+   LIGHTING-SCHEDUL = ( "EStarMFHR_Non-Apt_LTG-Ann" )
+   INF-SCHEDULE     = "ZG0-S1 (PSZ) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0211539
+   LIGHTING-W/AREA  = ( 0.66 )
+   POLYGON          = "EL1 Space Polygon 7b"
+   LOCATION         = FLOOR-V45
+   C-SCHEDULE-TYPE  = 3
+   C-SUB-AREA       = ( 3026.5 )
+   C-OCC-TYPE       = ( 22 )
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-901-OCC-TYPE   = ( 102 )
+   C-901-SCH-TYPE   = 2
+   C-HTG-SYS-CLASS  = 2
+   ..
+"EL1 East Slab (G.N7.S41)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 GFSHL Construction"
+   HEIGHT           = 0.5
+   LOCATION         = SPACE-V1
+   ..
+"EL1 East Wall (G.N7.E41)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "90.1 2007 BL Wall Z4-8"
+   LOCATION         = SPACE-V1
+   SHADING-SURFACE  = YES
+   ..
+"EL1 East Win (G.N7.E41.W1)" = WINDOW          
+   GLASS-TYPE       = "90.1_NonRes-Simple"
+   FRAME-WIDTH      = 0.125
+   X                = 0.9365
+   Y                = 2.125
+   HEIGHT           = 11.75
+   WIDTH            = 1.127
+   FRAME-CONDUCT    = 0.353
+   SPACER-TYPE      = ALUMINUM
+   ..
+"EL1 North Slab (G.N7.S42)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 GFSHL Construction"
+   HEIGHT           = 0.5
+   LOCATION         = SPACE-V2
+   ..
+"EL1 North Wall (G.N7.E42)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "90.1 2007 BL Wall Z4-8"
+   LOCATION         = SPACE-V2
+   SHADING-SURFACE  = YES
+   ..
+"EL1 North Win (G.N7.E42.W1)" = WINDOW          
+   GLASS-TYPE       = "90.1_NonRes-Simple"
+   FRAME-WIDTH      = 0.125
+   X                = 3.912
+   Y                = 2.125
+   HEIGHT           = 11.75
+   WIDTH            = 6.176
+   FRAME-CONDUCT    = 0.353
+   SPACER-TYPE      = ALUMINUM
+   ..
+"EL1 West Slab (G.N7.S43)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 GFSHL Construction"
+   HEIGHT           = 0.5
+   WIDTH            = 23
+   LOCATION         = SPACE-V3
+   ..
+"EL1 West Wall (G.N7.E43)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "90.1 2007 BL Wall Z4-8"
+   WIDTH            = 23
+   LOCATION         = SPACE-V3
+   SHADING-SURFACE  = YES
+   ..
+"EL1 West Win (G.N7.E43.W1)" = WINDOW          
+   GLASS-TYPE       = "90.1_NonRes-Simple"
+   FRAME-WIDTH      = 0.125
+   X                = 7.90937
+   Y                = 2.125
+   HEIGHT           = 11.75
+   WIDTH            = 7.68125
+   FRAME-CONDUCT    = 0.353
+   SPACER-TYPE      = ALUMINUM
+   ..
+"EL1 Flr (G.N7.I24)b" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 GFlr Construction"
+   LOCATION         = BOTTOM
+   ..
+"EL1 East Wall (G.N7.I27)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 Core Spc (G.C9)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V5
+   ..
+"Interior Wall 224" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 Core Spc (G.C8)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   WIDTH            = 14
+   LOCATION         = SPACE-V4
+   ..
+"Interior Wall 225" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (G.N7)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   X                = -20
+   WIDTH            = 33.5
    LOCATION         = SPACE-V3
    ..
 "EL2 Ground Flr" = FLOOR           
@@ -3117,13 +3649,15 @@ SET-DEFAULT FOR WINDOW
    LOCATION         = SPACE-V1
    ..
 "EL2 North Wall (G.C5.I16)" = INTERIOR-WALL   
-   NEXT-TO          = "EL2 East Perim Spc (G.E1)"
+   NEXT-TO          = "Elevator / Comm"
    CONSTRUCTION     = "EL1 IWall Construction"
    LOCATION         = SPACE-V2
    ..
 "EL2 East Wall (G.C5.I17)" = INTERIOR-WALL   
    NEXT-TO          = "EL2 East Perim Spc (G.E1)"
    CONSTRUCTION     = "EL1 IWall Construction"
+   X                = 22.5
+   WIDTH            = 8.5
    LOCATION         = SPACE-V3
    ..
 "EL2 North Wall (G.C5.I18)" = INTERIOR-WALL   
@@ -3904,6 +4438,43 @@ SET-DEFAULT FOR WINDOW
    CONSTRUCTION     = "EL1 Ceilg Construction"
    LOCATION         = TOP
    ..
+"Elevator / Comm" = SPACE           
+   X                = -17
+   Y                = 5
+   AZIMUTH          = -90
+   SHAPE            = POLYGON
+   ZONE-TYPE        = UNCONDITIONED
+   LIGHTING-SCHEDUL = ( "EStarMFHR_Non-Apt_LTG-Ann" )
+   INF-SCHEDULE     = "ZG0-S1 (PSZ) C-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.001
+   LIGHTING-W/AREA  = ( 0.66 )
+   POLYGON          = "Elev / Comm Space Polygon"
+   C-SCHEDULE-TYPE  = 3
+   C-SUB-AREA       = ( 941.02 )
+   C-OCC-TYPE       = ( 22 )
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-HTG-SYS-CLASS  = 2
+   ..
+"Interior Wall 226" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 East Perim Spc (G.E1)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V2
+   ..
+"Interior Wall 227" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 Core Spc (G.C5)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V3
+   ..
+"Interior Wall 228" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 West Perim Spc (G.W9)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V1
+   ..
 "EL2 Mid Flr" = FLOOR           
    Z                = 26.87
    AZIMUTH          = 360
@@ -4148,7 +4719,6 @@ SET-DEFAULT FOR WINDOW
    Y                = 5
    AZIMUTH          = -90
    SHAPE            = POLYGON
-   ZONE-TYPE        = CONDITIONED
    LIGHTING-SCHEDUL = ( "EStarMFHR_Non-Apt_LTG-Ann" )
    INF-SCHEDULE     = "ZG0-S1 (PSZ) C-Inf Sch"
    INF-METHOD       = AIR-CHANGE
@@ -4961,6 +5531,43 @@ SET-DEFAULT FOR WINDOW
    NEXT-TO          = "EL2 Core Spc (T.C51)"
    CONSTRUCTION     = "EL1 Ceilg Construction"
    LOCATION         = TOP
+   ..
+"Space 70" = SPACE           
+   X                = -17
+   Y                = 5
+   AZIMUTH          = -90
+   SHAPE            = POLYGON
+   ZONE-TYPE        = UNCONDITIONED
+   LIGHTING-SCHEDUL = ( "Annual Schedule 20" )
+   INF-SCHEDULE     = "Annual Schedule 21"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.001
+   LIGHTING-W/AREA  = ( 0.66 )
+   POLYGON          = "Polygon 110"
+   C-SCHEDULE-TYPE  = 3
+   C-SUB-AREA       = ( 941.02 )
+   C-OCC-TYPE       = ( 22 )
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-HTG-SYS-CLASS  = 2
+   ..
+"Interior Wall 232" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 East Perim Spc (M.E18)"
+   CONSTRUCTION     = "Construction 17"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V2
+   ..
+"Interior Wall 233" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 Core Spc (M.C22)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V3
+   ..
+"Interior Wall 234" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 West Perim Spc (M.W26)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V1
    ..
 "EL2 Top Flr" = FLOOR           
    Z                = 37.57
@@ -6020,6 +6627,43 @@ SET-DEFAULT FOR WINDOW
    CONSTRUCTION     = "EL1 IWall Construction"
    LOCATION         = SPACE-V3
    ..
+"Space 66" = SPACE           
+   X                = -17
+   Y                = 5
+   AZIMUTH          = -90
+   SHAPE            = POLYGON
+   ZONE-TYPE        = UNCONDITIONED
+   LIGHTING-SCHEDUL = ( "Annual Schedule 18" )
+   INF-SCHEDULE     = "Annual Schedule 19"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.001
+   LIGHTING-W/AREA  = ( 0.66 )
+   POLYGON          = "Polygon 109"
+   C-SCHEDULE-TYPE  = 3
+   C-SUB-AREA       = ( 941.02 )
+   C-OCC-TYPE       = ( 22 )
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-HTG-SYS-CLASS  = 2
+   ..
+"Interior Wall 229" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 East Perim Spc (T.E35)"
+   CONSTRUCTION     = "Construction 16"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V2
+   ..
+"Interior Wall 230" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 Core Spc (T.C39)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V3
+   ..
+"Interior Wall 231" = INTERIOR-WALL   
+   NEXT-TO          = "EL2 West Perim Spc (T.W43)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   LOCATION         = SPACE-V1
+   ..
 
 
 $ *********************************************************
@@ -6037,6 +6681,8 @@ $ ---------------------------------------------------------
    INTERIOR-POWER   = ( 0.1865, 3.73 )
    INTERIOR-SCH     = ( "ZG0-S1 (PSZ) P-Inf Sch", "Annual Schedule 17" )
    INTERIOR-EU      = ( EXT-USAGE, EXT-USAGE )
+   EXTERIOR-POWER   = ( 2.42 )
+   EXTERIOR-SCH     = ( "Annual Schedule 17" )
    ..
 
 
@@ -6201,10 +6847,10 @@ SET-DEFAULT FOR SYSTEM
    HEAT-SOURCE      = HEAT-PUMP
    ZONE-HEAT-SOURCE = HEAT-PUMP
    OA-CONTROL       = FIXED
-   SUPPLY-KW/FLOW   = 0.0003
+   SUPPLY-KW/FLOW   = 0.0007
    NIGHT-CYCLE-CTRL = CYCLE-ON-ANY
-   COOLING-EIR      = 0.153
-   HEATING-EIR      = 0.283
+   COOLING-EIR      = 0.236
+   HEATING-EIR      = 0.261
    ..
 
 SET-DEFAULT FOR ZONE            
@@ -7332,6 +7978,24 @@ SET-DEFAULT FOR ZONE
    SPACE            = "EL1 Core Spc (G.C8)"
    C-COMPLIANCE-DHW = "Res Compliance DHW"
    ..
+"Thermal Zone 64" = ZONE            
+   TYPE             = UNCONDITIONED
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "Elevator / Comm"
+   C-COMPLIANCE-DHW = "Res Compliance DHW"
+   ..
+"Thermal Zone 65" = ZONE            
+   TYPE             = UNCONDITIONED
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "Space 70"
+   C-COMPLIANCE-DHW = "Res Compliance DHW"
+   ..
+"Thermal Zone 66" = ZONE            
+   TYPE             = UNCONDITIONED
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "Space 66"
+   C-COMPLIANCE-DHW = "Res Compliance DHW"
+   ..
 "RTU-2" = SYSTEM          
    TYPE             = PMZS
    SUPPLY-FLOW      = 1200
@@ -7451,6 +8115,12 @@ SET-DEFAULT FOR ZONE
    COOL-TEMP-SCH    = "S1 Sys1 (PSZ) Cool Sch"
    SIZING-OPTION    = ADJUST-LOADS
    SPACE            = "EL1 North Perim Spc (G.N7)"
+   C-COMPLIANCE-DHW = "Res Compliance DHW"
+   ..
+"Thermal Zone 63" = ZONE            
+   TYPE             = UNCONDITIONED
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Spc (G.N7)b"
    C-COMPLIANCE-DHW = "Res Compliance DHW"
    ..
 
